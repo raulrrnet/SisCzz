@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_categoria" value="name:idcategoria;datatype:int4,name:categoria;datatype:text,name:consumotipo;datatype:text,name:idtipo;datatype:int8" />
+	<infoitem key="UD_material" value="name:idmaterial;datatype:int4,name:materiales;datatype:text,name:idcategoria;datatype:int4" />
+	<infoitem key="UD_marcatipo" value="name:idmarcatipo;datatype:int4,name:marcatipo;datatype:text,name:idmaterial;datatype:int4" />
+	<infoitem key="UD_gramcal" value="name:idgramcal;datatype:int4,name:gramajecalibre;datatype:text,name:idmarcatipo;datatype:int4" />
+	<infoitem key="UD_medidas" value="name:idmedida;datatype:int4,name:medida;datatype:text,name:idgramcal;datatype:int4,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_unidad" value="name:idunidad;datatype:int4,name:unidad;datatype:text,name:idmedida;datatype:int4" />
+	<infoitem key="UD_orden" value="name:idorden;datatype:int4,name:orden;datatype:numeric" />
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text" />
+	<infoitem key="UD_tcambio" value="name:idtipocambio;datatype:int4,name:fecha;datatype:date,name:tcambio;datatype:float4" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:nombreempresa;datatype:text" />
+	<infoitem key="UD_tipo" value="name:idtipo;datatype:int8,name:tipo;datatype:text" />
+	<infoitem key="UD_rsingresos" value="name:idmaterial;datatype:int4,name:idproveedor;datatype:int4,name:motivo;datatype:int4,name:idcambio;datatype:int4,name:cantidad;datatype:int4,name:orden_es;datatype:int4,name:valorusoles;datatype:int4,name:valorudolar;datatype:int4,name:cantsaldo;datatype:int4,name:idingreso;datatype:int4" />
+</info>

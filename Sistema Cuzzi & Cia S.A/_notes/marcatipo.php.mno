@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_material" value="name:idmaterial;datatype:int4,name:materiales;datatype:text,name:idcategoria;datatype:int4" />
+	<infoitem key="UD_rsmarcatipo" value="name:marcatipo;datatype:int4,name:idmaterial;datatype:int4,name:idmarcatipo;datatype:int4" />
+</info>

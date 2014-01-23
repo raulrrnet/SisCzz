@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_asignaoper" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:estado;datatype:text,name:seccion;datatype:text,name:idseccion;datatype:int4,name:porcentaje;datatype:numeric" />
+</info>

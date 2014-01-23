@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_orden" value="name:idorden;datatype:int8" />
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text" />
+	<infoitem key="UD_improduc" value="name:idimproduc;datatype:int4,name:motivo;datatype:text" />
+	<infoitem key="UD_operario" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text" />
+	<infoitem key="UD_rsinfotiempo" value="name:idoperario;datatype:int4,name:fecha;datatype:int4,name:idinforme;datatype:int4" />
+	<infoitem key="UD_cnkardex" value="name:iddetalle;datatype:int4,name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text,name:fecha;datatype:date,name:idseccion;datatype:int4,name:seccion;datatype:text,name:iddestino;datatype:int4,name:destino;datatype:text,name:idoperacion;datatype:int4,name:operacion;datatype:text,name:idorden;datatype:int8,name:tiempo;datatype:numeric,name:cantidad;datatype:numeric" />
+	<infoitem key="UD_operaciones" value="name:idoperaciones;datatype:int8,name:idseccion;datatype:int4,name:seccion;datatype:text,name:iddestino;datatype:int4,name:destino;datatype:text,name:idoperacion;datatype:int4,name:operacion;datatype:text" />
+</info>

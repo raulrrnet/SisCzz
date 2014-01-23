@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_mdirec" value="name:idmdmat;datatype:int4,name:material;datatype:text,name:idmddet;datatype:int4,name:detalle;datatype:text,name:idmatorden;datatype:int4,name:idmdmat;datatype:int4,name:idmddet;datatype:int4" />
+</info>

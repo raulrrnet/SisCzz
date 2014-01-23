@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_facturas" value="name:idfact;datatype:varchar,name:idcliente;datatype:int4,name:fecha;datatype:date,name:pedido;datatype:text,name:gremi;datatype:text,name:igv;datatype:numeric,name:moneda;datatype:text,name:estado;datatype:text,name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric,name:idgcliente;datatype:int4" />
+</info>

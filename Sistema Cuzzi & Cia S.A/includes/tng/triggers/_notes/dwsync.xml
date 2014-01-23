@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name=".tidyconf" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_CheckDetailRecord.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_CheckMasterRecord.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_CheckTableField.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_CheckUnique.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_defTrigg.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_DeleteDetailRec.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_Download.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_DynamicThumbnail.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_Email.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_EmailPageSection.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_EmailRecordset.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_FileDelete.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_FileUpload.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_FormValidation.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_ImageUpload.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_LinkedTrans.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_Logout.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_ManyToMany.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_MtmFakeRs.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_Redirect.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_RestrictAccess.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+<file name="tNG_SetOrderField.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671600000000" remote="128019671600000000" />
+<file name="tNG_ThrowError.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_TidyContent.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_TidyContent.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671560000000" remote="128019671560000000" />
+<file name="tNG_UserLoggedIn.class.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="128019671580000000" remote="128019671580000000" />
+</dwsync>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_diferen" value="name:iddiferencia;datatype:int4,name:idmaterial;datatype:int4,name:cantkardex;datatype:numeric,name:cantreport;datatype:numeric,name:fecha;datatype:date,name:vusoles;datatype:float8,name:vudolar;datatype:float8" />
+	<infoitem key="UD_totales" value="name:kar;datatype:float8,name:pla;datatype:float8,name:tdif;datatype:float8" />
+	<infoitem key="UD_Recordset1" value="name:id;datatype:text,name:idmateriales;datatype:int8,name:motivo;datatype:text,name:fecha;datatype:date,name:cantidad;datatype:numeric,name:catsaldo;datatype:numeric" />
+	<infoitem key="UD_cnmovimi" value="name:idmovimiento;datatype:int8,name:movimiento;datatype:text,name:idmaterial;datatype:int8,name:fecha;datatype:date,name:motivo;datatype:text,name:referencia;datatype:text,name:idorden;datatype:int4,name:idseccion;datatype:int4,name:cantidad;datatype:numeric,name:idproveedor;datatype:int4,name:ordenes;datatype:text,name:saldo;datatype:numeric,name:vusoles;datatype:float8,name:vudolar;datatype:float8,name:fecingreso;datatype:text,name:vuotross;datatype:float8,name:vuotrosd;datatype:float8" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_unidad" value="name:idunidad;datatype:int4,name:unidad;datatype:text" />
+</info>

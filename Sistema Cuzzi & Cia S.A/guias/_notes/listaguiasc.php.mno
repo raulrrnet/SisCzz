@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_guiascliente" value="name:nroguia;datatype:int4,name:fecha;datatype:date,name:cliente;datatype:text,name:local;datatype:text,name:direccion;datatype:text" />
+	<infoitem key="UD_guiasc" value="name:idsalida;datatype:int4,name:nroguia;datatype:int4,name:fecha;datatype:date,name:cliente;datatype:text,name:direccion;datatype:text,name:idlocal;datatype:int4,name:local;datatype:text" />
+</info>

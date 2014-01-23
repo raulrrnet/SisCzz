@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_clientes" value="name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric,name:idgcliente;datatype:int4,name:idgclien;datatype:int4,name:nombre;datatype:text,name:orden;datatype:numeric" />
+	<infoitem key="UD_local" value="name:idlocal;datatype:int4,name:nombre;datatype:text,name:direccion;datatype:text,name:idcliente;datatype:int4" />
+</info>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:consumotipo;datatype:text,name:categoria;datatype:text,name:material;datatype:text,name:marcatipo;datatype:text,name:gramajecalibre;datatype:text,name:medidas;datatype:text,name:unidad;datatype:text" />
+</info>

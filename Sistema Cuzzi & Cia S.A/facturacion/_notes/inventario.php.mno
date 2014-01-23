@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_saldos" value="name:idorden;datatype:int8,name:descripcion;datatype:text,name:cantprod;datatype:numeric,name:cantent;datatype:numeric,name:saldo;datatype:numeric" />
+</info>

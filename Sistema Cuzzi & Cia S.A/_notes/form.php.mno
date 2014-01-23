@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_categoria" value="name:idcategoria;datatype:int4,name:categoria;datatype:text,name:consumotipo;datatype:text" />
+	<infoitem key="UD_material" value="name:idmaterial;datatype:int4,name:materiales;datatype:text,name:idcategoria;datatype:int4" />
+	<infoitem key="UD_marcatipo" value="name:idmarcatipo;datatype:int4,name:marcatipo;datatype:text,name:idmaterial;datatype:int4" />
+	<infoitem key="UD_gramcal" value="name:idgramcal;datatype:int4,name:gramajecalibre;datatype:text,name:idmarcatipo;datatype:int4" />
+	<infoitem key="UD_medidas" value="name:idmedida;datatype:int4,name:medida;datatype:text,name:idgramcal;datatype:int4" />
+	<infoitem key="UD_unidad" value="name:idunidad;datatype:int4,name:unidad;datatype:text" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:nombreempresa;datatype:text" />
+	<infoitem key="UD_rsmateriales" value="name:idcategoria;datatype:int4,name:idmaterial;datatype:int4,name:idunidad;datatype:int4,name:idgramcal;datatype:int4,name:idmedida;datatype:int4,name:idmarcatipo;datatype:int4,name:idmateriales;datatype:int4" />
+	<infoitem key="UD_rsingresos" value="name:idproveedor;datatype:int4,name:motivo;datatype:int4,name:idcambio;datatype:int4,name:cantidad;datatype:int4,name:orden_es;datatype:int4,name:valorusoles;datatype:int4,name:valorudolar;datatype:int4,name:cantsaldo;datatype:int4,name:idmaterial;datatype:int4,name:idingreso;datatype:int4" />
+	<infoitem key="UD_Recordset1" value="name:idmovimiento;datatype:int8,name:moviento;datatype:text,name:idmaterial;datatype:int8,name:fecha;datatype:date,name:motivo;datatype:text,name:idorden;datatype:int4,name:idseccion;datatype:int4,name:cantidad;datatype:numeric,name:idproveedor;datatype:int4,name:ordenes;datatype:text,name:saldo;datatype:numeric,name:vusoles;datatype:float4,name:vudolar;datatype:float4" />
+</info>

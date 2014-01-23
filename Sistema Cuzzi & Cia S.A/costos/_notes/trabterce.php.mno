@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_tcambio" value="name:fecha;datatype:text,name:tcambio;datatype:float4" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:proveedor;datatype:text" />
+	<infoitem key="UD_descripcion" value="name:iddescrip;datatype:int4,name:descripcion;datatype:text" />
+</info>

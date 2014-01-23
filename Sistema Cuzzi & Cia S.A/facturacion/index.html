@@ -1,0 +1,29 @@
+<html>
+<head>
+ <title>Ejemplo Jquery $.post en daronwolff.wordpress.com</title>
+</head>
+ <script src="http://code.jquery.com/jquery-1.5.js"></script>
+ <script>
+ function enviar_variables()
+{
+t = $('#tex').val();
+$.post("mi_php.php",{orden:t},function(respuesta){
+//$('#tex2').val(respuesta);
+	if (respuesta=="ok"){
+	$("#tex2").removeAttr("disabled");}
+	else {$("#tex2").attr("disabled", true);}
+	}
+);
+}
+ </script>
+ <body>
+ <label>
+ <select name="tex" id="tex" onChange="enviar_variables();">
+    <option value="37196">o37196</option>
+    <option value="37197">o37197</option>
+ </select>
+  </label>
+  <input type="button" onClick="enviar_variables();" value="Enviar variables" />
+  <input name="tex2" type="text" id="tex2">
+</body>
+</html>

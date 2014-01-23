@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ord" value="name:idorden;datatype:int4" />
+	<infoitem key="UD_ord2" value="name:idorden;datatype:int4" />
+	<infoitem key="UD_centre" value="name:cant;datatype:numeric" />
+</info>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_material" value="name:idmdmat;datatype:int4,name:material;datatype:text" />
+	<infoitem key="UD_mddet" value="name:idmddet;datatype:int4,name:detalle;datatype:text" />
+</info>

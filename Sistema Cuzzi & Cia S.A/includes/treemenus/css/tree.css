@@ -1,0 +1,77 @@
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+ 
+div.ktcsstree ul, div.ktcsstree li {
+	margin: 0; padding: 0;
+	list-style-type: none;
+}
+
+div.ktcsstree ul ul {
+	display: none;
+}
+
+/* Fix IE. Hide from IE Mac \*/
+* html div.ktcsstree a, * html div.ktcsstree li div {
+	height: 1%;
+}
+/* End */
+
+div.ktcsstree ul {
+	margin-left: 20px;
+}
+div.ktcsstree li div, div.ktcsstree li div * {
+	vertical-align: middle;
+	display: inline;
+}
+
+/* look */
+div.ktcsstree {
+	font: normal 12px "MS Sans Serif", Serif, Arial, sans-serif;
+}
+div.ktcsstree li {
+	margin-bottom: 2px;
+}
+div.ktcsstree a {
+	color: #000000;
+	text-decoration: none;
+}
+div.ktcsstree a:hover {
+	color: #000066;
+	text-decoration: underline;
+}
+div.ktcsstree a.selected, div.ktcsstree a:active {
+	background-color: #000066;
+	color: #ffffff;
+}
+div.ktcsstree a.selected:hover {
+	color: #ffffff;
+}
+
+div.ktcsstree li div span {
+	padding: 0px 4px;
+	background-position: 100% 1px;
+	background-repeat: no-repeat;
+	color: #000000;
+	font-family: Courier, monospace;
+	cursor: default;
+}
+div.ktcsstree li div span.plus {
+	background-image: url(../img/plus.gif);
+}
+div.ktcsstree li div span.minus {
+	background-image: url(../img/minus.gif);
+}
+div.ktcsstree li div a {
+	margin-left: 2px;
+	padding: 2px 4px;
+}
+

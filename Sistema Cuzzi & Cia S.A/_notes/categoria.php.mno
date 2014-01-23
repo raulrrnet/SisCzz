@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_tipo" value="name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text" />
+	<infoitem key="UD_rscategoria" value="name:idtipo;datatype:int4,name:categoria;datatype:int4,name:idcategoria;datatype:int4" />
+</info>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_operarios" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text,name:estado;datatype:text" />
+	<infoitem key="UD_calend" value="name:id;datatype:int4,name:nombre;datatype:text" />
+	<infoitem key="UD_actiinfocabe" value="name:idinforme;datatype:int8,name:fecha;datatype:date,name:idoperario;datatype:int4,name:idcalen;datatype:int4" />
+</info>

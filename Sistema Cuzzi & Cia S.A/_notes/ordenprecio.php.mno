@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ordenprecio" value="name:idorden;datatype:int8,name:fecha;datatype:date,name:cliente;datatype:text,name:descripcion;datatype:text,name:cantpedi;datatype:numeric,name:tipoprecio;datatype:text,name:precios;datatype:numeric,name:preciod;datatype:numeric" />
+</info>

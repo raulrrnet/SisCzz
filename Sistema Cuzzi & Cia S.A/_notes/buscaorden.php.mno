@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:idorden;datatype:int8,name:fecha;datatype:date,name:idcliente;datatype:int4,name:cliente;datatype:text,name:descripcion;datatype:text,name:fechaliqui;datatype:date,name:fechatermi;datatype:date" />
+	<infoitem key="UD_clientes" value="name:idcliente;datatype:int4,name:cliente;datatype:text" />
+	<infoitem key="UD_ordclientes" value="name:idorden;datatype:int8,name:fecha;datatype:date,name:idcliente;datatype:int4,name:cliente;datatype:text,name:descripcion;datatype:text,name:fechaliqui;datatype:date,name:fechatermi;datatype:date" />
+</info>

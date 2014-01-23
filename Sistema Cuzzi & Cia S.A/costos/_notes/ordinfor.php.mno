@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ordinfor" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text,name:idcalen;datatype:int4,name:fecha;datatype:date,name:idinforme;datatype:int8,name:iddetalle;datatype:int4,name:idoperaciones;datatype:int8,name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:estado;datatype:text,name:potencia;datatype:numeric,name:iddestino;datatype:int4,name:destino;datatype:text,name:idoperacion;datatype:int4,name:operacion;datatype:text,name:idorden;datatype:int8,name:tiempo;datatype:numeric,name:cantidad;datatype:numeric,name:detalles;datatype:text" />
+</info>

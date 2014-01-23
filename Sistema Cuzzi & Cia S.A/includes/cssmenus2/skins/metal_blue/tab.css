@@ -1,0 +1,258 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.metal_blue {
+	font-family: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+	font-size: 11px;
+ 	font-weight: bold;
+}
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.metal_blue ul {
+	font-weight:normal;
+}
+
+
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.metal_blue li {
+	width: 92px;
+	background-image:url(img/middle_tab2.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding: 1px 0px 1px 0px;
+}
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.metal_blue ul li {
+	width: auto;
+	background-image: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.metal_blue a {
+	text-decoration: none;
+	color: #585858;
+	line-height: 30px;
+	padding: 0px 8px 0px 20px;
+	border-right:1px solid #9F9F9F;
+	border-left:1px solid #F9F9F9;
+	cursor: pointer;
+}
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the second (or more) level menu items
+ */
+.metal_blue ul a {
+	color: #626262;
+	line-height: 21px;
+	padding: 0px 27px 0px 3px;
+	border: none;
+}
+
+
+
+/*
+ * Settings specific to the "METAL BLUE" skin only
+ *
+ */
+ /* this applies to the first item of the first level */
+.metal_blue li.first {
+	background-image: url(img/left_tab2.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+/* this applies to the last item in the first level */
+.metal_blue li.last {
+	background-image: url(img/right_tab2.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+/* this applies to the link inside the first item of the first level */
+.metal_blue li.first a {
+	border-left: none;
+}
+/* this applies to the link inside the last item of the first level */
+.metal_blue li.last a {
+	border-right: none;
+}
+/* this applies to the first/last item of the second (or more) level */
+.metal_blue ul li.first,
+.metal_blue ul li.last {
+	width: auto;	
+	background-image: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.metal_blue li.hover {
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.metal_blue ul li.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.metal_blue a.hover {
+	color: #2E5F8E !important;
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.metal_blue ul a.hover {
+  	color:#466581;
+}
+
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.metal_blue li.selected {
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.metal_blue ul li.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.metal_blue a.selected {
+	color: #5283B8;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.metal_blue ul a.selected {
+	color: #5283B8;
+	font-weight: bold;
+}
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.metal_blue .arrow {
+	background-image:url(img/horizontal_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 7px 14px;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.metal_blue .hover .arrow {
+	background-image:url(img/arrow_vertical.gif);
+	background-position: 9px 12px;
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.tab {
+	clear: both;
+}
+div.tab br {
+	clear: both;
+}
+div.tab ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.tab li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: none;
+	text-align: left;
+    position: static;
+}
+div.tab li img {
+	border: none;
+}
+div.tab a {
+	clear: both;
+	display: block;
+	margin: 0px; 
+}
+div.tab ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both;
+	float: left;
+}
+div.tab ul li ul li ul {
+	display: none;
+}
+div.tab ul li ul li {
+	float: left;
+	clear: none;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

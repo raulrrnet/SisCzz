@@ -1,0 +1,282 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.interakt_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+ 	font-weight: bold;
+ 	border: none;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.interakt_blue ul {
+	font-weight: normal;
+ 	border: none;
+}
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to third (or more) level menu containers
+ */
+.interakt_blue ul ul {
+	border: 1px solid #10133A;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.interakt_blue li {
+	background-color: #3c4070;
+	width: 120px;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.interakt_blue ul li {
+	width: 190px;
+}
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to third (or more) level menu items
+ */
+.interakt_blue ul ul li {
+	width: 176px;
+	border-left: 2px solid #65688F;
+	border-right: 2px solid #65688F;
+	background-color: #3C4070;
+}
+
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to the first item of third (or more) level
+ */
+.interakt_blue ul ul li.first {
+	border-top: 2px solid #65688F;
+}
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to the last item of third (or more) level
+ */
+.interakt_blue ul ul li.last {
+	border-bottom: 2px solid #65688F;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.interakt_blue a {
+	text-decoration: none;
+	color: #ffffff;
+	text-align: left;
+	line-height: 27px;
+	padding: 2px 2px 2px 20px;
+	cursor: pointer;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.interakt_blue ul a {
+	text-align: left;
+	line-height: 12px;
+	border-top: 1px solid #65688F;
+	border-bottom: 1px solid #303465;
+	padding: 2px 2px 2px 20px;
+}
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to links located in the third (or more) level menu items
+ */
+.interakt_blue ul ul a {
+	border: none;
+	padding-left: 10px;
+}
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.interakt_blue li.selected {
+	background-color: #7177BF;
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.interakt_blue ul li.selected {
+    background-color: #3c4070;
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.interakt_blue a.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.interakt_blue ul a.selected {
+	font-weight: bold;
+}
+
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.interakt_blue li.hover {
+	background-color: #65688F !important;	
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.interakt_blue ul li.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.interakt_blue a.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.interakt_blue ul a.hover {
+}
+
+
+/*
+ * specific to interakt_blue skin only
+ * Applies to third (or more) level menu items
+ */
+.interakt_blue ul ul li.hover {
+	background-color: #65688F;
+}
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.interakt_blue .arrow {
+	background-image: url(img/pos2.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.interakt_blue .hover ul .arrow,
+.interakt_blue ul .arrow {
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.interakt_blue .hover .arrow {
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.interakt_blue ul .hover .arrow {
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.vertical {
+	clear: both;
+}
+div.vertical br {
+	clear: both;
+}
+div.vertical ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.vertical li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: both;
+	text-align: left;
+    position: static;
+}
+div.vertical li img {
+	border: none;
+}
+div.vertical a {
+	clear: both;
+	display: block;
+	margin: 0px;
+}
+div.vertical ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both; 
+}
+div.vertical ul li ul li {
+	clear: both; 
+}
+
+div.vertical ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

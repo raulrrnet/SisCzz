@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_cliente" value="name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric" />
+	<infoitem key="UD_gproduc" value="name:idgproduc;datatype:int4,name:nombre;datatype:text" />
+	<infoitem key="UD_tcambio" value="name:fecha;datatype:date,name:tcambio;datatype:float4" />
+	<infoitem key="UD_ordimp" value="name:idorden;datatype:int8,name:idcliente;datatype:int4,name:idprodorden;datatype:int4,name:descripcion;datatype:text,name:cantpedi;datatype:numeric,name:cantprod;datatype:numeric,name:precios;datatype:numeric,name:preciod;datatype:numeric,name:fecha;datatype:date,name:pedido;datatype:text,name:fechaliqui;datatype:date,name:fechatermi;datatype:date,name:detalle;datatype:text,name:observacion;datatype:text,name:tipoprecio;datatype:text,name:obserliqui;datatype:text,name:fechacomp;datatype:date,name:fechacomp2;datatype:text,name:preciook;datatype:text,name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric,name:idgcliente;datatype:int4,name:idprodorden;datatype:int4,name:idgprod;datatype:int4,name:idtprod;datatype:int4,name:idtproduc;datatype:int4,name:tipop;datatype:text,name:idgproduc;datatype:int4,name:grupop;datatype:text" />
+	<infoitem key="UD_matorden" value="name:iddetalle;datatype:int4,name:idorden;datatype:int4,name:idmatord;datatype:int4,name:uso;datatype:text,name:idmdmat;datatype:int4,name:material;datatype:text,name:idmddet;datatype:int4,name:detalle;datatype:text,name:idmatorden;datatype:int4,name:idmdmat;datatype:int4,name:idmddet;datatype:int4" />
+</info>

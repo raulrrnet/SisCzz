@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_orden" value="name:idorden;datatype:int8,name:idtarifa;datatype:int8" />
+	<infoitem key="UD_operaciones" value="name:idoperaciones;datatype:int8,name:idseccion;datatype:int4,name:seccion;datatype:text,name:iddestino;datatype:int4,name:destino;datatype:text,name:idoperacion;datatype:int4,name:operacion;datatype:text" />
+	<infoitem key="UD_operario" value="name:idinforme;datatype:int8,name:idoperario;datatype:int4,name:nombre;datatype:text,name:fecha;datatype:date" />
+	<infoitem key="UD_tarifa" value="name:idtarifa;datatype:int4,name:nombre;datatype:text,name:estado;datatype:text,name:vig_inicioq;datatype:text,name:vig_fin;datatype:text" />
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text" />
+</info>

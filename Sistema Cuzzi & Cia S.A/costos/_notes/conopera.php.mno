@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_seccion" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text" />
+	<infoitem key="UD_operario" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text,name:estado;datatype:text" />
+</info>

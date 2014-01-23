@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_gramcal" value="name:idgramcal;datatype:int4,name:gramajecalibre;datatype:text,name:idmarcatipo;datatype:int4" />
+	<infoitem key="UD_rsmedidas" value="name:medida;datatype:int4,name:idgramcal;datatype:int4,name:idmedida;datatype:int4" />
+</info>

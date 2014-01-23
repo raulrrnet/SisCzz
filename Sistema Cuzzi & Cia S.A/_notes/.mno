@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_URL_Count" value="0" />
+	<infoitem key="MM_Form_Count" value="0" />
+	<infoitem key="MM_Session_Count" value="0" />
+	<infoitem key="PageAccessControlMethod" value="dontUseAccessList" />
+	<infoitem key="PageAccessControl" value="admin,usuariog,usuarioc,usuariop" />
+</info>

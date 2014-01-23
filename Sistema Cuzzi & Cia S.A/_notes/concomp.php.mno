@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_materiales" value="name:idmateriales;datatype:int8,name:tipoconsumo;datatype:text,name:categoria;datatype:text,name:materiales;datatype:text,name:marcatipo;datatype:text,name:gramajecalibre;datatype:text,name:medida;datatype:text,name:unidad;datatype:text" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:proveedor;datatype:text" />
+</info>

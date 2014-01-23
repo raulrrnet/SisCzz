@@ -1,0 +1,22 @@
+<!--
+	Copyright (c) S.C. InterAKT Online SRL
+	http://www.interakt.ro/
+-->
+<html>
+<head>
+<script>
+s = window.location.href;
+i = s.indexOf("?");
+if (i != -1) {
+	d = s.substring(i+1);
+	alert(d)
+	parent.canvas.delTables(true);
+	parent.canvas.newTable(d);
+	parent.canvas.checkRelations();
+}
+window.location = "queryResult.html";
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="adodb-access.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314740000000" remote="127912314740000000" />
+<file name="adodb-ado.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314740000000" remote="127912314740000000" />
+<file name="adodb-ado5.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314740000000" remote="127912314740000000" />
+<file name="adodb-ado_access.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-ado_mssql.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-borland_ibase.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-csv.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-db2.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-fbsql.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-firebird.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-ibase.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-informix.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-informix72.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-ldap.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-mssql.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-mssqlpo.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314760000000" remote="127912314760000000" />
+<file name="adodb-mysql.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-mysqli.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-mysqlt.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-netezza.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-oci8.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-oci805.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-oci8po.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-odbc.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-odbc_mssql.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314780000000" remote="127912314780000000" />
+<file name="adodb-odbc_oracle.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-odbtp.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-odbtp_unicode.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-oracle.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-pdo.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-postgres.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-postgres64.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-postgres7.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-proxy.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sapdb.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sqlanywhere.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sqlite.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sqlitepo.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sybase.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-sybase_ase.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314820000000" remote="127912314820000000" />
+<file name="adodb-vfp.inc.php" server="C:/Program Files/BitNami WAPPStack/apache2/htdocs/cuzzicop/" local="127912314820000000" remote="127912314820000000" />
+<file name="adodb-postgres7.inc.php" server="//SVRCUZZI/wwwroot/cuzzicia/" local="127912314800000000" remote="127912314800000000" />
+<file name="adodb-postgres64.inc.php" server="//SVRCUZZI/wwwroot/cuzzicia/" local="127912314800000000" remote="127912314800000000" />
+</dwsync>

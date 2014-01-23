@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text,name:potencia;datatype:numeric" />
+	<infoitem key="UD_actumante" value="name:idcostmante;datatype:int4,name:idseccion;datatype:int4,name:fecha;datatype:date,name:costototal;datatype:float8" />
+</info>

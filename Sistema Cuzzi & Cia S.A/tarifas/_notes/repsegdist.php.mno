@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_segudistri" value="name:idseguro;datatype:int4,name:prima;datatype:float8,name:seguro;datatype:text,name:fecha;datatype:date,name:iddistribs;datatype:int4,name:idseguro;datatype:int4,name:idseccion;datatype:int4,name:porcentaje;datatype:numeric" />
+</info>

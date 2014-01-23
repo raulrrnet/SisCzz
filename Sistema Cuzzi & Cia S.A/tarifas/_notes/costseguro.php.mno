@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_seguro" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text,name:potencia;datatype:numeric" />
+	<infoitem key="UD_rsseguros" value="name:prima;datatype:int4,name:seguro;datatype:int4,name:fecha;datatype:int4,name:idseguro;datatype:int4" />
+	<infoitem key="UD_rsdistribucions" value="name:idseccion;datatype:int4,name:porcentaje;datatype:int4,name:idseguro;datatype:int4,name:iddistribs;datatype:int4" />
+</info>

@@ -1,0 +1,246 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.arktic_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+ 	font-weight: bold;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.arktic_blue ul {
+	border: 1px solid #afafaf;
+	font-weight: normal;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.arktic_blue li {
+	background-image: url(img/bgtop_h.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border: 1px solid #AFAFAF;
+	width: 110px;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.arktic_blue ul li {
+	background-image: url(img/bg.gif);
+	background-repeat: repeat-y;
+	background-color: #ffffff;
+	border: none;
+ 	width: 180px;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.arktic_blue a {
+	text-decoration: none;
+	line-height: 18px;
+	color: #555555;
+	padding: 1px 2px 1px 21px;
+	border-bottom: 2px solid  #385698;
+	cursor: pointer;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.arktic_blue ul a {
+ 	border-bottom:1px solid #ffffff;
+}
+
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.arktic_blue li.selected {
+	background-image: url(img/bgtop_h_sel.gif);
+	background-repeat: repeat-x;
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.arktic_blue ul li.selected {
+	background-image: url(img/bg_sel.gif);
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.arktic_blue a.selected {
+	color: #000000 !important;
+	border-bottom-color: #4469ba;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.arktic_blue ul a.selected {
+	color: #555555;
+	border-bottom-color: #ffffff;
+}
+
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.arktic_blue li.hover {
+    background-image: none;
+	background-color: #3c63a2;
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.arktic_blue ul li.hover {
+  	background-color: #3C63A2;
+  	background-image: none;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.arktic_blue a.hover {
+	color: #ffffff !important;
+	border-bottom-color: #92a7d7;
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.arktic_blue ul a.hover {
+  	border-bottom-color: #ffffff;
+}
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.arktic_blue .arrow {
+	background-image: url(img/arrow_right_color.gif);
+	background-repeat: no-repeat;
+	background-position: 3px center;
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.arktic_blue .hover ul .arrow,
+.arktic_blue ul .arrow {
+	background-image: url(img/sarrow_right_dark.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.arktic_blue .hover .arrow {
+	background-image: url(img/arrow_down_light.gif);
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.arktic_blue ul .hover .arrow {
+	background-image: url(img/sarrow_right_light.gif);
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.horizontal {
+	clear: both;
+}
+div.horizontal br {
+	clear: both;
+}
+div.horizontal ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.horizontal li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: none;
+	text-align: left;
+    position: static;
+}
+div.horizontal li img {
+	border: none;
+}
+div.horizontal a {
+	clear: both;
+	display: block;
+	margin: 0px;
+}
+div.horizontal ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both; 
+}
+div.horizontal ul li ul li {
+	clear: both; 
+}
+div.horizontal ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

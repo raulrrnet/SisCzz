@@ -1,0 +1,252 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.modern_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+ 	font-weight: bold;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.modern_blue ul {
+	border:1px solid #406E8E;
+	font-weight: normal;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.modern_blue li {
+	background-image: url(img/bg_v.gif);
+	background-repeat: repeat-x;
+	background-position: top left;
+	width: 140px;
+}
+
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.modern_blue ul li {
+	background-color: #CFDBE3;
+	background-image: none;
+	border: none;
+ 	width: 180px;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.modern_blue a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 2px 2px 2px 20px;
+	line-height: 18px;
+	cursor: pointer;
+	border-top:1px solid #5887A8;
+	border-bottom:1px solid #102841;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.modern_blue ul a {
+	border: none;
+	border-bottom:1px solid #ffffff;
+	color: #335872;
+}
+
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.modern_blue li.selected {
+	background-color: #123E62;
+	background-image: none;
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.modern_blue ul li.selected {
+	background-color: #2E5B7C;
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.modern_blue a.selected {
+	color: #ffffff;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.modern_blue ul a.selected {
+}
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.modern_blue li.hover {
+	background-color: #102841;
+	background-image: none;
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.modern_blue ul li.hover {
+	background-color: #102841;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.modern_blue a.hover {
+	color: #ffffff;
+	border-top:2px solid #406E8E;
+	border-bottom: none;
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.modern_blue ul a.hover {
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+/*
+ * Specific to MODERN skin only
+ * Applies to links located in the third (or more) level menu items
+ */
+.modern_blue ul ul li.hover  {
+	background-color: #4C677D;
+}
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.modern_blue .arrow {
+	background-image: url(img/arrow_right_color.gif);
+	background-repeat: no-repeat;
+	background-position: 6px center;
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.modern_blue .hover ul .arrow,
+.modern_blue ul .arrow {
+	background-image: url(img/arrow_right_color.gif);
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.modern_blue .hover .arrow {
+	background-image: url(img/arrow_right_light.gif);
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.modern_blue ul .hover .arrow {
+	background-image: url(img/arrow_right_light.gif);
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.vertical {
+	clear: both;
+}
+div.vertical br {
+	clear: both;
+}
+div.vertical ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.vertical li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: both;
+	text-align: left;
+    position: static;
+}
+div.vertical li img {
+	border: none;
+}
+div.vertical a {
+	clear: both;
+	display: block;
+	margin: 0px;
+}
+div.vertical ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both; 
+}
+div.vertical ul li ul li {
+	clear: both; 
+}
+
+div.vertical ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

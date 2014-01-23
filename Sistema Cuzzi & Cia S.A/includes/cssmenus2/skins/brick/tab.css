@@ -1,0 +1,223 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.brick {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+ 	font-weight: bold;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.brick ul {
+	font-weight:normal;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.brick li {
+	background-image:url(img/dark_brick_tab.gif);
+	background-repeat:no-repeat;
+	width: 111px;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.brick ul li {
+	background-image: none;
+	background-color: transparent;
+ 	width: auto;
+ 	border: none;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.brick a {
+	text-decoration: none;
+	color:#ffffff;
+	line-height: 25px;
+	padding: 0 0 0 28px;
+	cursor: pointer;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.brick ul a {
+ 	border: none;
+ 	color: #595959;
+ 	font-size: 11px;
+	line-height: 21px;
+}
+
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.brick li.hover {
+	background-image:url(img/light_brick_tab.gif) !important;
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.brick ul li.hover {
+	background-image: none !important;
+	background-color: transparent;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.brick a.hover {
+	color:#000000 !important;
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.brick ul a.hover {
+   color: #E79393 !important;
+}
+
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.brick li.selected {
+background-image:url(img/selected1.gif);
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.brick ul li.selected {
+	background-image:none;
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.brick a.selected {
+	color:#ffffff;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.brick ul a.selected {
+	color:#BAACAC;
+	font-weight: bold;
+}
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.brick .arrow {
+	background-image:url(img/arrow_white_hrizontall2.gif);
+	background-repeat: no-repeat;
+	background-position: 12px center;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.brick .hover .arrow {
+	background-image:url(img/arrow_dark_hrizontall2.gif);
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.tab {
+	clear: both;
+}
+div.tab br {
+	clear: both;
+}
+div.tab ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.tab li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: none;
+	text-align: left;
+    position: static;
+}
+div.tab li img {
+	border: none;
+}
+div.tab a {
+	clear: both;
+	display: block;
+	margin: 0px; 
+}
+div.tab ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both;
+	float: left;
+}
+div.tab ul li ul li ul {
+	display: none;
+}
+div.tab ul li ul li {
+	float: left;
+	clear: none;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

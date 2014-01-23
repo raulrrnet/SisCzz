@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_datorden" value="name:idorden;datatype:int8,name:cliente;datatype:text,name:descripcion;datatype:text,name:cantpedi;datatype:numeric,name:cantprod;datatype:numeric,name:fecha;datatype:date,name:observacion;datatype:text" />
+	<infoitem key="UD_consuor" value="name:soles;datatype:float8,name:dolar;datatype:float8" />
+</info>

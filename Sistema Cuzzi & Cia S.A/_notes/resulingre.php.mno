@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_cnsalidas" value="name:idingreso;datatype:int8,name:idmateriales;datatype:int4,name:idproveedor;datatype:int4,name:motivo;datatype:text,name:fecha;datatype:date,name:idcambio;datatype:int4,name:referencia;datatype:text,name:cantidad;datatype:numeric,name:orden_es;datatype:text,name:valorusoles;datatype:numeric,name:valorudolar;datatype:numeric,name:cantsaldo;datatype:numeric" />
+	<infoitem key="UD_cningresos" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:idcategoria;datatype:int8,name:idmaterial;datatype:int8,name:idmarcatipo;datatype:int8,name:idgramcal;datatype:int8,name:idmedidas;datatype:int8,name:idunidad;datatype:int8,name:diasrepo;datatype:numeric" />
+</info>

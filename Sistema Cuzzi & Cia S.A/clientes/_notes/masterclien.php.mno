@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_gclientes" value="name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric,name:idgcliente;datatype:int4,name:idgclien;datatype:int4,name:nombre;datatype:text,name:orden;datatype:text" />
+</info>

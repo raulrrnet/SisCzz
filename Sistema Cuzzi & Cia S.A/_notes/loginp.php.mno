@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:idasigna;datatype:int8,name:idoperario;datatype:int4,name:idseccion;datatype:int4,name:porcentaje;datatype:numeric,name:fecha;datatype:date" />
+</info>

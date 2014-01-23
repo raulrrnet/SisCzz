@@ -1,0 +1,250 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.simple {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+ 	font-weight: bold;
+ 	border: solid 1px #afafaf;
+ 	border-bottom-color: #666666;
+}
+
+/*
+ * Menu container settings
+ * Applies to second level menu containers
+ */
+.simple ul {
+	border: none;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.simple li {
+	background-image: url(img/bg.gif);
+	width: 180px;
+	border-top: solid 1px #ffffff;
+	border-bottom: solid 1px #c0c0c0;
+}
+
+/*
+ * Menu items settings
+ * Applies to second level menu items
+ */
+.simple ul li {
+    background-image: none;	
+	background-color: #E0E0E0;
+ 	border: none;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.simple a {
+	text-decoration: none;
+	color: #336699;
+	line-height: 20px;
+	padding: 0px 2px;
+	padding-left: 18px;
+	cursor: pointer;
+}
+
+/*
+ * Specific to the simple skin, the expandable LAYOUT. 
+ * Applies to the first item of the second level.
+ */
+.simple ul li.first {
+	border-top: solid 1px #666666;
+}
+
+/*
+ * Specific to the simple skin, the expandable LAYOUT. 
+ * Applies to the link inside the first item of the second level.
+ */
+.simple ul li.first a {
+	border-top: solid 1px #999999;
+}
+
+/*
+ * Specific to the simple skin, the expandable LAYOUT. 
+ * Applies to the last item of the second level.
+ */
+.simple ul li.last {
+	border: none;
+}
+
+/*
+ * Specific to the simple skin, the expandable LAYOUT. 
+ * Applies to the link inside the last item of the second level.
+ */
+.simple ul li.last a {
+	border:none;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second level menu items
+ */
+.simple ul a {
+ 	border: none;
+ 	border-bottom: 1px solid silver;
+ 	color: #336699;
+}
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.simple li.hover {
+	background-position: 0px 12px !important;
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second level menu items
+ */
+.simple ul li.hover {
+  	background-color: #336699;
+  	background-image: none;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.simple a.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second level menu items
+ */
+.simple ul a.hover {
+  	color: #FFFFFF !important;
+}
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.simple li.selected {
+	background-position: 0px 22px;
+}
+
+/*
+ * Selected menu item
+ * Applies to second level selected menu items
+ */
+.simple ul li.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.simple a.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second level menu items
+ */
+.simple ul a.selected {
+	color: #555555;
+}
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.simple .arrow {
+	background-image: url(img/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+/* 
+ * Define the arrow for the expanded state
+ * Applies to all menu items that have expanded sub-menus
+ */
+.simple .expanded .arrow {
+	background-image: url(img/arrow_hover.gif);	
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.expandable {
+	clear: both;
+}
+div.expandable br {
+	clear: both;
+}
+div.expandable ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.expandable li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: both;
+	text-align: left;
+    position: relative;
+}
+div.expandable li img {
+	border: none;
+}
+div.expandable a {
+	clear: both;
+	float: none;
+	display: block;
+	margin: 0px;
+}
+div.expandable ul li ul {
+	position: static;
+	visibility: visible;
+	display: block;
+	clear: both;
+	margin: 0px;
+	margin-top: -5000px;
+}
+div.expandable ul li ul li ul {
+	display: none;
+}
+div.expandable ul li ul li {
+	clear: both;
+
+}
+div.expandable ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

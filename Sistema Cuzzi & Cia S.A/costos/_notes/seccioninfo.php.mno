@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text" />
+</info>

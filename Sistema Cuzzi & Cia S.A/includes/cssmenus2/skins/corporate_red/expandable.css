@@ -1,0 +1,242 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.corporate_red {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+ 	font-weight: bold;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.corporate_red ul {
+	font-weight:normal;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.corporate_red li {
+	background-color: #FFFFFF;
+	width: 168px;
+	border-left: solid 1px #757575;
+	margin-bottom: 7px;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.corporate_red ul li {
+	border-left:none;
+	margin: 0px;
+ }
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.corporate_red a {
+	text-decoration: none;
+	color: #757575;
+	line-height: 22px;
+	padding: 0px 0px 0px 16px;
+	cursor: pointer;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.corporate_red ul a {
+ 	border: none; 	
+ 	color: #757575;
+ 	font-size: 11px;
+	line-height: 18px;
+	padding: 0px 8px 0px 16px;
+}
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.corporate_red li.hover {
+	background-color:#DD001A;
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.corporate_red ul li.hover {
+	background-color:#FFFFFF;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.corporate_red a.hover {
+	color:#FFFFFF !important;;
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.corporate_red ul a.hover {
+  	color: #DD001A !important;
+}
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.corporate_red li.selected {
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.corporate_red ul li.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.corporate_red a.selected {
+	color:#DD001A;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.corporate_red ul a.selected {
+	color:#DD001A;
+	font-weight: bold;
+}
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.corporate_red .arrow {
+	background-image:url(img/grey_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 6px;
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.corporate_red .hover ul .arrow,
+.corporate_red ul .arrow {
+	background-image:url(img/grey_arrow.gif);
+	background-position: 8px 4px;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.corporate_red .hover .arrow {
+	background-image:url(img/white_arrow_horizontal.gif);
+	background-position: 7px 8px;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.corporate_red ul .hover .arrow {
+	background-image:url(img/red_arrow.gif);
+}
+
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.expandable {
+	clear: both;
+}
+div.expandable br {
+	clear: both;
+}
+div.expandable ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.expandable li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: both;
+	text-align: left;
+    position: relative;
+}
+div.expandable li img {
+	border: none;
+}
+div.expandable a {
+	clear: both;
+	float: none;
+	display: block;
+	margin: 0px;
+}
+div.expandable ul li ul {
+	position: static;
+	visibility: visible;
+	display: block;
+	clear: both;
+	margin: 0px;
+	margin-top: -5000px;
+}
+div.expandable ul li ul li ul {
+	display: none;
+}
+div.expandable ul li ul li {
+	clear: both;
+
+}
+div.expandable ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

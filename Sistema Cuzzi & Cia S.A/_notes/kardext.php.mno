@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_cningresos" value="name:idmaterial;datatype:int4,name:motivo;datatype:text,name:fecha;datatype:date,name:idorden;datatype:int8,name:idseccion;datatype:int4,name:cantidad;datatype:numeric,name:cantingre;datatype:numeric,name:valorusoles;datatype:numeric,name:valorudolar;datatype:numeric,name:idproveedor;datatype:int4,name:ordenes;datatype:text,name:saldingre;datatype:numeric" />
+</info>

@@ -1,0 +1,234 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.interakt_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+ 	font-weight: bold;
+ 	border: none;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.interakt_blue ul {
+	font-weight: normal;
+ 	border: none;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.interakt_blue li {
+	width: 100px;
+ 	background-color: #3c4070;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.interakt_blue ul li {
+	background-color: transparent;
+	width: auto;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.interakt_blue a {
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	line-height: 27px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.interakt_blue ul a {
+	text-align: left;
+	line-height: 12px;
+	padding: 2px 2px 2px 20px;
+	color: #65688F;
+}
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.interakt_blue li.selected {
+	background-color: #7177BF;
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.interakt_blue ul li.selected {
+	background-color: transparent;
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.interakt_blue a.selected {
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.interakt_blue ul a.selected {
+	font-weight: bold;
+}
+
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.interakt_blue li.hover {
+	background-color: #65688F;	
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.interakt_blue ul li.hover {
+	background-color: transparent;
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.interakt_blue a.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.interakt_blue ul a.hover {
+	color: #3c4070 !important;
+}
+
+
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.interakt_blue .arrow {
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.interakt_blue .hover ul .arrow,
+.interakt_blue ul .arrow {
+	background-image: url(img/pos2.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.interakt_blue .hover .arrow {
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.interakt_blue ul .hover .arrow {
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.tab {
+	clear: both;
+}
+div.tab br {
+	clear: both;
+}
+div.tab ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.tab li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: none;
+	text-align: left;
+    position: static;
+}
+div.tab li img {
+	border: none;
+}
+div.tab a {
+	clear: both;
+	display: block;
+	margin: 0px; 
+}
+div.tab ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both;
+	float: left;
+}
+div.tab ul li ul li ul {
+	display: none;
+}
+div.tab ul li ul li {
+	float: left;
+	clear: none;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

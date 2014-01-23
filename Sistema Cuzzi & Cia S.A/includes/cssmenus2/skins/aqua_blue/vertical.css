@@ -1,0 +1,247 @@
+/*************************************************************************
+* This is the SKIN style definition for the CSS menu.                    *
+* Feel free to customize this section.                                   *
+*************************************************************************/
+
+/*
+ * Menu container settings
+ * Applies to the first level menu container
+ */
+.aqua_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+ 	font-weight: bold;
+}
+
+/*
+ * Menu container settings
+ * Applies to second (or more) level menu containers
+ */
+.aqua_blue ul {
+ 	font-weight: normal;
+}
+
+/*
+ * Menu items settings
+ * Applies to all menu items in all menu containers
+ */
+.aqua_blue li {
+	width: 150px;
+	background-image: url(img/bgtop_v.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+/*
+ * Menu items settings
+ * Applies to second (or more) level menu items
+ */
+.aqua_blue ul li {
+	background-image: url(img/bg.gif);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	padding-left: 10px;
+	width: 180px;
+}
+
+/*
+ * Menu link settings
+ * Applies to links that are to be found within the menu items, no matter the menu level
+ */
+.aqua_blue a {
+	text-decoration: none;
+	line-height: 29px;
+	cursor: pointer;
+	padding: 1px 2px 1px 20px;
+	color: #555555;
+	white-space: nowrap;
+}
+
+/*
+ * specific to AQUA skin only
+ * Applies to the link located in the last item of the first level
+ */
+.aqua_blue li.last a {
+	line-height: 32px;
+}
+
+/*
+ * Menu link settings
+ * Applies to links located in the second (or more) level menu items
+ */
+.aqua_blue ul a {
+ 	line-height: 19px !important;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+/*
+ * Specific to AQUA skin only:
+ * Applies to links located in the third (or more) level menu items
+ */
+.aqua_blue ul ul a {
+	padding-left: 7px;
+}
+
+/*****************************************************************************
+* In this section, we will define what happens when a menu item is selected  *
+*****************************************************************************/
+
+/*
+ * Selected menu item
+ * Applies to selected menu items in all menu containers
+ */
+.aqua_blue li.selected {
+	background-image: url(img/bgtop_v_sel.gif);
+}
+
+/*
+ * Selected menu item
+ * Applies to second (or more) level selected menu items
+ */
+.aqua_blue ul li.selected {
+	background-image: url(img/bg_sel.gif);
+	background-repeat: no-repeat;
+}
+
+/*
+ * Selected links
+ * Applies to selected links in all menu items
+ */
+.aqua_blue a.selected {
+	color: #000000;
+}
+
+/*
+ * Selected links
+ * Applies to selected links located in the second (or more) level menu items
+ */
+.aqua_blue ul a.selected {
+}
+
+
+/***************************************************************************
+* In this section, we will define what happens when mouse-overing an item  *
+***************************************************************************/
+
+/*
+ * Mouse over on menu items
+ * Applies to all menu items in all menu containers
+ */
+.aqua_blue li.hover {
+	background-image: url(img/bgtop_v_over.gif);
+}
+  
+/*
+ * Mouse over on menu items
+ * Applies to second (or more) level menu items
+ */
+.aqua_blue ul li.hover {
+  	background-image: url(img/bg_over.gif);
+}
+
+/*
+ * Mouse over on links
+ * Applies to all links in all menu items
+ */
+.aqua_blue a.hover {
+}
+
+/*
+ * Mouse over on links
+ * Applies to links located in the second (or more) level menu items
+ */
+.aqua_blue ul a.hover {
+}
+
+
+/******************************************************************************
+* In this section, we will define the menu arrows behavior                    *
+* An arrow is inserted next to the menu item when the menu item has sub-menus *
+******************************************************************************/
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus
+ */
+.aqua_blue .arrow {
+}
+
+/* 
+ * Define the arrow
+ * Applies to all menu items that have sub-menus located in the second (or more) level
+ */
+.aqua_blue .hover ul .arrow,
+.aqua_blue ul .arrow {
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus on mouse over
+ */
+.aqua_blue .hover .arrow {
+}
+
+/* 
+ * Define the arrow on mouse over
+ * Applies to all menu items that have sub-menus located in the second (or more) level on mouse over
+ */
+.aqua_blue ul .hover .arrow {
+}
+/*************************************************************************
+* This is the LAYOUT style definition for the CSS menu                   *
+* DO NOT alter this section, unless you know what you're doing           *
+*************************************************************************/
+div.vertical {
+	clear: both;
+}
+div.vertical br {
+	clear: both;
+}
+div.vertical ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+div.vertical li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	clear: both;
+	text-align: left;
+    position: static;
+}
+div.vertical li img {
+	border: none;
+}
+div.vertical a {
+	clear: both;
+	display: block;
+	margin: 0px;
+}
+div.vertical ul li ul {
+	position: absolute;
+	left: -5000px;
+	top: -5000px;
+	visibility: hidden;
+	clear: both; 
+}
+div.vertical ul li ul li {
+	clear: both; 
+}
+
+div.vertical ul li ul li a {
+	clear: both;
+}
+.hasImg,
+.hasImg a {
+	padding: 0px !important;
+	margin:	0px	!important;
+	border:	none !important;
+	outline: none !important;
+	background:	transparent !important;
+	width: auto !important;
+}

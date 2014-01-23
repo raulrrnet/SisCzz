@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rscustom" value="name:kt_login_user;datatype:int4,name:kt_login_password;datatype:int4,name:kt_login_rememberme;datatype:int4" />
+</info>

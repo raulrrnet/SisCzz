@@ -1,0 +1,414 @@
+-- Function: asigoperarios(numeric, numeric)
+
+-- DROP FUNCTION asigoperarios(numeric, numeric);
+
+CREATE OR REPLACE FUNCTION asigoperarios(idsec numeric, idop numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT porcentaje/100 as porcent 
+into v_monto
+FROM operario o
+inner join asignacion a
+on (o.idoperario = a.idoperario) 
+WHERE idseccion=idsec 
+and o.idoperario = idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION asigoperarios(numeric, numeric) OWNER TO enterprisedb;
+
+
+- Function: costohoraoperario(numeric, numeric, numeric)
+
+-- DROP FUNCTION costohoraoperario(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION costohoraoperario(idop numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto1 real;
+v_monto2 real;
+begin
+select CostoTotalOperario(idop,anio,mess)
+into v_monto1;
+select tiempoTotalOperario(idop,anio,mess)
+into v_monto2;
+return v_monto1/v_monto2;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION costohoraoperario(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: costototal(numeric, numeric)
+
+-- DROP FUNCTION costototal(numeric, numeric);
+
+CREATE OR REPLACE FUNCTION costototal(anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare v_monto real;
+begin
+SELECT costototal as costotal 
+into v_monto
+FROM costoelec 
+WHERE date_part('month',mes)=mess
+and date_part('year',mes)=anio;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION costototal(numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: costototaloperario(numeric, numeric, numeric)
+
+-- DROP FUNCTION costototaloperario(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION costototaloperario(idop numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(costototal) as costotal
+into v_monto 
+FROM v_operario 
+WHERE date_part('month',mes)=mess 
+and date_part('year',mes)=anio
+and idoperario=idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION costototaloperario(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: electricidad(numeric, numeric, numeric)
+
+-- DROP FUNCTION electricidad(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION electricidad(sec numeric, anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo*potencia) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE (iddestino = 1) 
+and idseccion = sec --$idsec 
+and date_part('month',fecha)=mes --$mes11 
+and date_part('year',fecha)=anio; --$an11;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION electricidad(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: factor(numeric, numeric)
+
+-- DROP FUNCTION factor(numeric, numeric);
+
+CREATE OR REPLACE FUNCTION factor(anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto1 real;
+v_monto2 real;
+begin
+SELECT costototal(anio,mes) 
+into v_monto1;
+SELECT tiempo(anio,mes) 
+into v_monto2;
+return v_monto2/v_monto1;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION factor(numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: gen_planta_tiempo(numeric, numeric)
+
+-- DROP FUNCTION gen_planta_tiempo(numeric, numeric);
+
+CREATE OR REPLACE FUNCTION gen_planta_tiempo(anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+sELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE iddestino = 1 
+and date_part('month',fecha)=mes
+and date_part('year',fecha)=anio;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION gen_planta_tiempo(numeric, numeric) OWNER TO enterprisedb;
+
+- Function: generales_planta(numeric, numeric, numeric)
+
+-- DROP FUNCTION generales_planta(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION generales_planta(idsec numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare v_monto real;
+begin
+SELECT sum(costototal) as costotal
+into v_monto
+FROM costogp 
+WHERE date_part('month',mes)=mess 
+and date_part('year',mes)=anio
+and idseccion=idsec;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION generales_planta(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: impropesinsecc(numeric, numeric, numeric)
+
+-- DROP FUNCTION impropesinsecc(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION impropesinsecc(idop numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE iddestino in (5,6,7,8) 
+and date_part('month',fecha)=mess 
+and date_part('year',fecha)=anio
+and idoperario = idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION impropesinsecc(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: insumos(numeric, numeric, numeric)
+
+-- DROP FUNCTION insumos(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION insumos(sec numeric, anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(vusoles*cantidad) as insu 
+into v_monto
+From movimientos 
+WHERE motivo='5Consumo' 
+and date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio
+and idseccion=sec and idorden=0;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION insumos(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: mantenimiento(numeric, numeric, numeric)
+
+-- DROP FUNCTION mantenimiento(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION mantenimiento(idsec numeric, anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT costototal as costotal 
+into v_monto
+FROM costomante 
+WHERE date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio 
+and idseccion = idsec;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION mantenimiento(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: otrosgastos(numeric, numeric, numeric)
+
+-- DROP FUNCTION otrosgastos(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION otrosgastos(idsec numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(costototal) as costotal 
+into v_monto
+FROM costotros 
+WHERE idsec=idsec 
+and date_part('month',mes)=mess 
+and date_part('year',mes)=anio;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION otrosgastos(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+
+-- Function: sumatiempos(numeric, numeric, numeric)
+
+-- DROP FUNCTION sumatiempos(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION sumatiempos(mes numeric, anio numeric, idope numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio 
+and idoperario=idope;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION sumatiempos(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: sumtiempoope(numeric, numeric, numeric, numeric)
+
+-- DROP FUNCTION sumtiempoope(numeric, numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION sumtiempoope(idsec numeric, mess numeric, anio numeric, idop numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes WHERE (iddestino=1 or iddestino = 2) 
+and idseccion = idsec
+and date_part('month',fecha)=mess
+and date_part('year',fecha)=anio
+and idoperario =idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION sumtiempoope(numeric, numeric, numeric, numeric) OWNER TO enterprisedb;
+
+
+-- Function: tiempo(numeric, numeric)
+
+-- DROP FUNCTION tiempo(numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempo(anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo*potencia) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE iddestino = 1  
+and date_part('year',fecha)=anio 
+and date_part('month',fecha)=mes;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempo(numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: tiempoimproopesec(numeric, numeric, numeric, numeric)
+
+-- DROP FUNCTION tiempoimproopesec(numeric, numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempoimproopesec(idsec numeric, mess numeric, anio numeric, idop numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes WHERE idoperacion = 5 
+and idseccion = idsec
+and date_part('month',fecha)=mess
+and date_part('year',fecha)=anio
+and idoperario = idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempoimproopesec(numeric, numeric, numeric, numeric) OWNER TO enterprisedb;
+
+
+-- Function: tiempoproductivo(numeric, numeric, numeric)
+
+-- DROP FUNCTION tiempoproductivo(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempoproductivo(idsec numeric, mes numeric, anio numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE iddestino=1 
+and idseccion =idsec 
+and date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempoproductivo(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: tiempoproductivoseccion(numeric, numeric, numeric)
+
+-- DROP FUNCTION tiempoproductivoseccion(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempoproductivoseccion(idsec numeric, anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE iddestino=1 
+and idseccion =idsec 
+and date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio;
+return v_monto;
+end;
+$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempoproductivoseccion(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+
+-- Function: tiempototaloperario(numeric, numeric, numeric)
+
+-- DROP FUNCTION tiempototaloperario(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempototaloperario(idop numeric, anio numeric, mess numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo 
+into v_monto
+FROM v_informes 
+WHERE date_part('month',fecha)=mess 
+and date_part('year',fecha)=anio
+and idoperario=idop;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempototaloperario(numeric, numeric, numeric) OWNER TO enterprisedb;
+
+-- Function: tiempoxseccion(numeric, numeric, numeric)
+
+-- DROP FUNCTION tiempoxseccion(numeric, numeric, numeric);
+
+CREATE OR REPLACE FUNCTION tiempoxseccion(sec numeric, anio numeric, mes numeric)
+  RETURNS real AS
+$BODY$declare 
+v_monto real;
+begin
+SELECT sum(tiempo) as tiempo
+into v_monto 
+FROM v_informes WHERE iddestino=1 
+and idseccion = sec 
+and date_part('month',fecha)=mes 
+and date_part('year',fecha)=anio;
+return v_monto;
+end;$BODY$
+  LANGUAGE 'plpgsql' STABLE;
+ALTER FUNCTION tiempoxseccion(numeric, numeric, numeric) OWNER TO enterprisedb;

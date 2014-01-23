@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_tarifa" value="name:idtarifa;datatype:int4,name:nombre;datatype:text,name:estado;datatype:text,name:vig_inicio;datatype:date,name:vig_fin;datatype:date" />
+	<infoitem key="UD_cliente" value="name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:numeric,name:idgcliente;datatype:int4" />
+	<infoitem key="UD_gproduc" value="name:idgproduc;datatype:int4,name:grupop;datatype:text" />
+	<infoitem key="UD_materiales" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:responsable;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text,name:diasrepo;datatype:numeric" />
+	<infoitem key="UD_tcambio" value="name:fecha;datatype:date,name:tcambio;datatype:float4" />
+	<infoitem key="UD_tproduc" value="name:idtproduc;datatype:int4,name:tipop;datatype:text" />
+	<infoitem key="UD_prodorden" value="name:idprodorden;datatype:int4,name:idgproduc;datatype:int4,name:grupop;datatype:text,name:idtproduc;datatype:int4,name:tipop;datatype:text" />
+</info>

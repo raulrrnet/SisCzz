@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_tsaldo" value="name:sum;datatype:numeric" />
+	<infoitem key="UD_detsaldo" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text,name:idmovimiento;datatype:int8,name:movimiento;datatype:text,name:fecha;datatype:date,name:motivo;datatype:text,name:referencia;datatype:text,name:idorden;datatype:int4,name:orden;datatype:text,name:idseccion;datatype:int4,name:seccion;datatype:text,name:cantidad;datatype:numeric,name:idproveedor;datatype:int4,name:proveedor;datatype:text,name:ordenes;datatype:text,name:saldo;datatype:numeric,name:vusoles;datatype:float8,name:vudolar;datatype:float8" />
+</info>

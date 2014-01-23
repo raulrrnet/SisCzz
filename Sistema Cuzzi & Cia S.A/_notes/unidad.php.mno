@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_medida" value="name:idmedida;datatype:int4,name:medida;datatype:text,name:idgramcal;datatype:int4" />
+	<infoitem key="UD_rsunidad" value="name:unidad;datatype:int4,name:idmedida;datatype:int4,name:idunidad;datatype:int4" />
+</info>

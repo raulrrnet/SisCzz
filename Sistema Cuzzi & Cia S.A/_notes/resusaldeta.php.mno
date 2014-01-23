@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_cningresos" value="name:idingreso;datatype:int8,name:idmateriales;datatype:int4,name:idproveedor;datatype:int4,name:motivo;datatype:text,name:fecha;datatype:date,name:idcambio;datatype:int4,name:referencia;datatype:text,name:cantidad;datatype:numeric,name:ordenes;datatype:text,name:valorusoles;datatype:numeric,name:valorudolar;datatype:numeric,name:cantsaldo;datatype:numeric,name:idorden;datatype:int8,name:idseccion;datatype:int4,name:cantsali;datatype:numeric" />
+	<infoitem key="UD_Recordset1" value="name:fecha;datatype:date,name:idmateriales;datatype:int8,name:tmateriales;datatype:text,name:saldo;datatype:numeric" />
+	<infoitem key="UD_tsaldo" value="name:sum;datatype:numeric" />
+</info>

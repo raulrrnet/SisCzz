@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_materiales" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:responsable;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text,name:diasrepo;datatype:numeric" />
+	<infoitem key="UD_tcambio" value="name:fecha;datatype:text,name:tcambio;datatype:float4" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:proveedor;datatype:text" />
+	<infoitem key="UD_fecini" value="name:fecha;datatype:text,name:tcambio;datatype:float4" />
+</info>

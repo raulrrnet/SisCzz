@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rstipomaterial1" value="name:tipomaterial;datatype:text,name:directoindirecto;datatype:text,name:idtipo;datatype:int4" />
+	<infoitem key="UD_Recordset1" value="name:idunidad;datatype:int4,name:unidad;datatype:text" />
+	<infoitem key="UD_Recordset2" value="name:idtipo;datatype:int4" />
+	<infoitem key="UD_Recordset3" value="name:idmaterial;datatype:int4,name:idtipo;datatype:int4" />
+	<infoitem key="UD_Recordset4" value="name:idmaterial;datatype:int4,name:idnombre;datatype:int4" />
+	<infoitem key="UD_categoria" value="name:idcategoria;datatype:int4,name:categoria;datatype:text,name:consumotipo;datatype:text" />
+	<infoitem key="UD_material" value="name:idmaterial;datatype:int4,name:materiales;datatype:text,name:idcategoria;datatype:int4" />
+	<infoitem key="UD_marcatipo" value="name:idmarcatipo;datatype:int4,name:marcatipo;datatype:text,name:idmaterial;datatype:int4" />
+	<infoitem key="UD_gramcal" value="name:idgramcal;datatype:int4,name:gramajecalibre;datatype:text,name:idmarcatipo;datatype:int4" />
+	<infoitem key="UD_medidas" value="name:idmedida;datatype:int4,name:medida;datatype:text,name:idgramcal;datatype:int4" />
+</info>

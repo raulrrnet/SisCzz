@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_orden" value="name:idorden;datatype:int8,name:orden;datatype:text" />
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text" />
+	<infoitem key="UD_actuliza" value="name:idmovimiento;datatype:int8,name:movimiento;datatype:text,name:idmaterial;datatype:int8,name:fecha;datatype:date,name:motivo;datatype:text,name:referencia;datatype:text,name:idorden;datatype:int4,name:idseccion;datatype:int4,name:cantidad;datatype:numeric,name:idproveedor;datatype:int4,name:ordenes;datatype:text,name:saldo;datatype:numeric,name:vusoles;datatype:float8,name:vudolar;datatype:float8,name:fecingreso;datatype:text,name:vuotross;datatype:float8,name:vuotrosd;datatype:float8" />
+	<infoitem key="UD_materiales" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:responsable;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text" />
+	<infoitem key="UD_matselect" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:proveedor;datatype:text" />
+</info>

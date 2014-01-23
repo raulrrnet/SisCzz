@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_img" value="name:id;datatype:int4,name:cant;datatype:numeric,name:text;datatype:text,name:imagen;datatype:text" />
+	<infoitem key="UD_rspruebas" value="name:text;datatype:int4,name:imagen;datatype:int4,name:id;datatype:int4" />
+</info>

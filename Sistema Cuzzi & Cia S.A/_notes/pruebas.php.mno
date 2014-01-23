@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_cnkardex" value="name:iddetacalen;datatype:int8,name:idcalen;datatype:int4,name:fecha;datatype:date,name:dospri;datatype:numeric,name:sgts;datatype:numeric,name:tiempo;datatype:numeric" />
+	<infoitem key="UD_master1calend" value="name:id;datatype:int4,name:nombre;datatype:text" />
+	<infoitem key="UD_detail2detcalend" value="name:iddetacalen;datatype:int8,name:idcalen;datatype:int4,name:fecha;datatype:date,name:dospri;datatype:numeric,name:sgts;datatype:numeric,name:tiempo;datatype:numeric" />
+	<infoitem key="UD_ordenliq" value="name:idorden;datatype:int8,name:fecha;datatype:date,name:fechaliqui;datatype:date,name:cliente;datatype:text,name:descripcion;datatype:text,name:precios;datatype:numeric" />
+</info>

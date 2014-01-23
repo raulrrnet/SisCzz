@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_secciones" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text,name:potencia;datatype:numeric" />
+	<infoitem key="UD_actutari" value="name:idtarifadet;datatype:int4,name:idtarifa;datatype:int4,name:idseccion;datatype:int4,name:vdolar;datatype:float8,name:vsoles;datatype:float8,name:fechavigencia;datatype:date" />
+</info>

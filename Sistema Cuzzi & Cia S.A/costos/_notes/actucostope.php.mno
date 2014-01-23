@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_actucostope" value="name:idcosperario;datatype:int4,name:idoperario;datatype:int4,name:mes;datatype:date,name:costototal;datatype:float8" />
+	<infoitem key="UD_operarios" value="name:idoperario;datatype:int4,name:nombre;datatype:text,name:cargo;datatype:text,name:estado;datatype:text" />
+</info>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_material" value="name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_unidad" value="name:idunidad;datatype:int8,name:unidad;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_orden" value="name:idorden;datatype:int8,name:orden;datatype:text" />
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text" />
+	<infoitem key="UD_proveedor" value="name:idproveedor;datatype:int4,name:nombreempresa;datatype:text" />
+	<infoitem key="UD_tipoconsumo" value="name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_categoria" value="name:idcategoria;datatype:int8,name:categoria;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_marcatipo" value="name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_gramcal" value="name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_medidas" value="name:idmedidas;datatype:int8,name:medida;datatype:text,name:idmateriales;datatype:int8" />
+	<infoitem key="UD_materiales" value="name:idmateriales;datatype:int8,name:idtipoconsumo;datatype:int8,name:tipoconsumo;datatype:text,name:idcategoria;datatype:int8,name:categoria;datatype:text,name:idmaterial;datatype:int8,name:materiales;datatype:text,name:idmarcatipo;datatype:int8,name:marcatipo;datatype:text,name:idgramcal;datatype:int8,name:gramajecalibre;datatype:text,name:idmedidas;datatype:int8,name:medida;datatype:text,name:idunidad;datatype:int8,name:unidad;datatype:text" />
+	<infoitem key="UD_tcambio" value="name:idtipocambio;datatype:int4,name:fecha;datatype:date,name:tcambio;datatype:float4" />
+</info>

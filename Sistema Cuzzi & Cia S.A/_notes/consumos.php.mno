@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_consumos" value="name:idmateriales;datatype:int8,name:tipoconsumo;datatype:text,name:fecha;datatype:date,name:material;datatype:text,name:idorden;datatype:int4,name:cantidad;datatype:numeric,name:vusoles;datatype:float8,name:vudolar;datatype:float8" />
+	<infoitem key="UD_informes" value="name:idmateriales;datatype:int8,name:tipoconsumo;datatype:text,name:fecha;datatype:date,name:material;datatype:text,name:idorden;datatype:int4,name:cantidad;datatype:numeric,name:vusoles;datatype:float8,name:vudolar;datatype:float8" />
+</info>
