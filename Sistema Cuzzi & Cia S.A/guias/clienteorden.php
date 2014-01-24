@@ -9,15 +9,18 @@ $query_ord = "SELECT idorden,min(descripcion) FROM salidaal s,detsalidaal d WHER
 $ord = $cnx_cuzzicia->SelectLimit($query_ord) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_ord = $ord->RecordCount();
 // end Recordset
-$orden[] = 0;
-$orden[] = 0;
-$arr[] = "CLIENTE";
+$orden[] = 0;$orden[] = 0;
+$cantprod[] = "CANT. PROD.";
+$arr[] = "LIBRO    CLIENTE";
 $select = "";
 $select2 = "";
 $select3 = "";
 while (!$ord->EOF) {
 	$idord = $ord->Fields('idorden');
 	$orden[] = $ord->Fields('idorden');
+	$q_ord = "SELECT cantprod FROM orden WHERE idorden=$idord";
+	$exord = $cnx_cuzzicia->SelectLimit($q_ord) or die($cnx_cuzzicia->ErrorMsg());
+	$cantprod[] = $exord->Fields('cantprod');
 	$arr[] = $idord .'<br>'.$ord->Fields('min');
 	$select .= ",sum(case when idorden='$idord' then cantidad end) ";
 	$select2 .= ",sum(case when idorden='$idord' then cantprod end) ";
@@ -31,7 +34,7 @@ $Recordrep = $cnx_cuzzicia->SelectLimit($query_rep) or die($cnx_cuzzicia->ErrorM
 $query_cu = "SELECT 0".$select2."FROM orden";
 $Recordcu = $cnx_cuzzicia->SelectLimit($query_cu) or die($cnx_cuzzicia->ErrorMsg());
 //echo $query_cu;
-$query_sa = "SELECT 0".$select3."FROM salidaal s,detsalidaal d WHERE  s.idsalida=d.idsalidaal and idmotivo=2 AND estado<>'anulada'";
+$query_sa = "SELECT 0".$select3."FROM salidaal s,detsalidaal d WHERE  s.idsalida=d.idsalidaal AND estado<>'anulada'";
 $Recordsa = $cnx_cuzzicia->SelectLimit($query_sa) or die($cnx_cuzzicia->ErrorMsg());
 //echo $query_sa;
 
@@ -68,6 +71,16 @@ $tarr = count($arr);
   for ($j = 0; $j < $tarr; $j++) {
 	echo "<td><div class='cdiv2'>";
       echo $arr[$j];
+	echo "</div></td>";
+  }
+?>
+</tr>
+<tr align='center'>
+<?php
+  $i = pg_num_fields($results);
+  for ($j = 0; $j < $tarr-1; $j++) {
+	echo "<td><div class='cdiv2'>";
+      echo $cantprod[$j];
 	echo "</div></td>";
   }
 ?>
