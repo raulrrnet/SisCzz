@@ -30,8 +30,10 @@ $Recordrep = $cnx_cuzzicia->SelectLimit($query_rep) or die($cnx_cuzzicia->ErrorM
 
 $query_cu = "SELECT 0".$select2."FROM orden";
 $Recordcu = $cnx_cuzzicia->SelectLimit($query_cu) or die($cnx_cuzzicia->ErrorMsg());
-$query_sa = "SELECT 0".$select3."FROM salidaal s,detsalidaal d WHERE  s.idsalida=d.idsalidaal and estado<>'anulada'";
+//echo $query_cu;
+$query_sa = "SELECT 0".$select3."FROM salidaal s,detsalidaal d WHERE  s.idsalida=d.idsalidaal and idmotivo=2 AND estado<>'anulada'";
 $Recordsa = $cnx_cuzzicia->SelectLimit($query_sa) or die($cnx_cuzzicia->ErrorMsg());
+//echo $query_sa;
 
  $pgsql_conn = pg_connect("host=192.168.1.55 port=5432 dbname=cuzzi user=postgres password=cd231285");
  $results = pg_query($pgsql_conn, "$query_rep");
