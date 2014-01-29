@@ -13,7 +13,7 @@ $query_ordc = sprintf("SELECT idorden,cliente,max(descripcion),sum(cantpedi) as 
 $exqordc = $cnx_cuzzicia->SelectLimit($query_ordc) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_exqordc = $exqordc->RecordCount();
 //detalle
-$query_ordd = sprintf("SELECT nroguia,cliente,fecha,sum(cantidad) as cant, max(und) as und FROM salidaal s,detsalidaal ds, clientes c WHERE s.idsalida=ds.idsalidaal and s.idcliente=c.idcliente and idorden=$idorden GROUP BY nroguia,cliente,fecha ORDER BY cliente,fecha,nroguia");
+$query_ordd = sprintf("SELECT nroguia,cliente,fecha,sum(cantidad) as cant, max(und) as und,max(estado) as estado FROM salidaal s,detsalidaal ds, clientes c WHERE s.idsalida=ds.idsalidaal and s.idcliente=c.idcliente and idorden=$idorden GROUP BY nroguia,cliente,fecha ORDER BY cliente,fecha,nroguia");
 $exqordd = $cnx_cuzzicia->SelectLimit($query_ordd) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_exqordd = $exqordd->RecordCount();
 //PHP ADODB document - made with PHAkt 3.6.0
@@ -49,6 +49,7 @@ $sumcant = 0;
     <td class="KT_th">CLIENTE</td>
     <td class="KT_th">FECHA</td>
     <td class="KT_th">CANTIDAD</td>
+    <td class="KT_th">Estado</td>
   </tr>
     <?php
   while (!$exqordd->EOF) { 
@@ -62,7 +63,8 @@ $sumcant = 0;
 	$sumcant+=$exqordd->Fields('cant');}else{$sumcant+=$exqordd->Fields('cant')/1000;}
 	if($exqordd->Fields('und')=='Mill'){echo number_format($exqordd->Fields('cant'),3);}else{echo number_format($exqordd->Fields('cant'),2);} ?> 
       <?php echo $exqordd->Fields('und'); ?></td>
-    </tr>
+    <td align="right"><?php echo $exqordd->Fields('estado'); ?></td>
+  </tr>
   <?php
     $exqordd->MoveNext(); 
   }
