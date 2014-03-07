@@ -784,7 +784,7 @@ class fvtarifas2 extends conexion{
 		        where idseccion=$idsec
 		        and date_part('year',fechavigencia)<=$anio
 				order by fechavigencia desc
-				limit 1 offset 1"; 
+				limit 1"; 
 		        $this->Execute($query);
                 $this->vsoles=$this->fields('vsoles');                        
 		}
