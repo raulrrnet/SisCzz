@@ -13,7 +13,7 @@ $query_ordc = sprintf("SELECT idorden,cliente,max(descripcion),sum(cantpedi) as 
 $exqordc = $cnx_cuzzicia->SelectLimit($query_ordc) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_exqordc = $exqordc->RecordCount();
 //detalle
-$query_ordd = sprintf("SELECT f.idfact,fecha,sum(cantidad) as cant, max(monto) as pu, sum(cantidad*monto) as tot, max(und) as und FROM factura f,detallefact df WHERE f.idfact=df.idfact and estado<>'anulada' and idorden=$idorden GROUP BY f.idfact,fecha ORDER BY fecha,f.idfact");
+$query_ordd = sprintf("SELECT f.idfact,fecha,sum(cantidad) as cant, max(monto) as pu, sum(cantidad*monto) as tot, max(und) as und FROM factura f,detallefact df WHERE f.idfact=df.idfactura and estado<>'anulada' and idorden=$idorden GROUP BY f.idfact,fecha ORDER BY fecha,f.idfact");
 $exqordd = $cnx_cuzzicia->SelectLimit($query_ordd) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_exqordd = $exqordd->RecordCount();
 //PHP ADODB document - made with PHAkt 3.6.0

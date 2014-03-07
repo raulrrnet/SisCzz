@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Sistema Cuzzi - Modulo Gerencia</title>
+<title>Sistema Cuzzi - Modulo Facturación</title>
 </head>
 
 <frameset rows="99,*" cols="*" frameborder="no" border="0" framespacing="0">
-  <frame src="../facturacion/cabece.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frame src="cabece.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset rows="*" cols="180,*" framespacing="0" frameborder="no" border="0">
-    <frame src="../facturacion/menus.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-    <frame src="../facturacion/conte.html" name="mainFrame" id="mainFrame" title="mainFrame" />
+    <frame src="menus.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+    <frame src="conte.html" name="mainFrame" id="mainFrame" title="mainFrame" />
   </frameset>
 </frameset>
 <noframes><body>

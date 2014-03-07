@@ -16,7 +16,7 @@ $totalRows_cliente = $cliente->RecordCount();
 // end Recordset
 $mone = $cliente->Fields('moneda');
 // begin Recordset
-$query_factura = "SELECT * FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and f.idfact='$idfact' ORDER BY iddetfact";
+$query_factura = "SELECT * FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and f.idfact='$idfact' ORDER BY iddetfact";
 $factura = $cnx_cuzzicia->SelectLimit($query_factura) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_factura = $factura->RecordCount();
 // end Recordset

@@ -17,7 +17,7 @@ $ud = date("t",$fecfecha);
 $fecini = $anio."/".$mes."/01";
 $fecfin = $anio."/".$mes."/".$ud;
 // begin Recordset ordenes terminadas
-$query_t = "SELECT idorden,cliente,max(descripcion),sum(cantidad) as cant, sum(monto) as pu, sum(cantidad*monto) as tot, und FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and fecha BETWEEN '$fecini' and '$fecfin' and estado<>'anulada' and idorden<>0 group by idorden,cliente,und order by idorden";
+$query_t = "SELECT idorden,cliente,max(descripcion),sum(cantidad) as cant, sum(monto) as pu, sum(cantidad*monto) as tot, und FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and fecha BETWEEN '$fecini' and '$fecfin' and estado<>'anulada' and idorden<>0 group by idorden,cliente,und order by idorden";
 $otermi = $cnx_cuzzicia->SelectLimit($query_t) or die($cnx_cuzzicia->ErrorMsg());
 $totermi = $otermi->RecordCount();
 // end Recordset

@@ -27,7 +27,7 @@ sum(case when(date_part('month', fecha)=11) then(cantidad*monto) end) as noviemb
 sum(case when(date_part('month', fecha)=12) then(cantidad*monto) end) as diciembre,
 sum(cantidad*monto) as th
 FROM factura f,detallefact df,clientes c,gclientes g
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and c.idgcliente = g.idgclien and fecha <= '$fec_' and estado<>'anulada' and idorden<>0
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and c.idgcliente = g.idgclien and fecha <= '$fec_' and estado<>'anulada' and idorden<>0
 GROUP BY g.nombre,orden,date_part('year', fecha) ORDER BY orden");
 $cnkardex = $cnx_cuzzicia->SelectLimit($query_cningresos) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_cnkardex = $cnkardex->RecordCount();
@@ -47,7 +47,7 @@ sum(case when(date_part('month', fecha)=11) then(cantidad*monto) end) as noviemb
 sum(case when(date_part('month', fecha)=12) then(cantidad*monto) end) as diciembre,
 sum(cantidad*monto) as tt
 FROM factura f,detallefact df,clientes c 
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and fecha <= '$fec_' and estado<>'anulada' and idorden<>0
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and fecha <= '$fec_' and estado<>'anulada' and idorden<>0
 GROUP BY date_part('year', fecha) ORDER BY date_part('year', fecha)");
 $exect = $cnx_cuzzicia->SelectLimit($query_t) or die($cnx_cuzzicia->ErrorMsg());
 //PHP ADODB document - made with PHAkt 3.6.0

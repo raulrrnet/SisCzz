@@ -27,7 +27,7 @@ $query_saldos = "SELECT o.idorden,
   FROM orden o,
        detallefact d,
        factura f
-  WHERE f.idfact = d.idfact AND
+  WHERE f.idfact = d.idfactura AND
         d.idorden = o.idorden AND
         o.fechaliqui <= '$fecha' AND
         f.fecha <= '$fecha' AND

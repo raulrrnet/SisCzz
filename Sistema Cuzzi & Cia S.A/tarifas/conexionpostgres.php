@@ -705,11 +705,11 @@ class fvtarifas extends conexion{
 	public function get_potencia(){
         return $this->fields('potencia'); 
     }  
-	function conectar($idse,$anio,$mes){
+	function conectar($idsec,$anio,$mes){
 		$query="select 
 		idtarifa,nombre,estado,vig_inicio,vig_fin,idtarifadet,vdolar,vsoles,idseccion,seccion,unidad,status,potencia 
         from v_tarifas 
-        where  idseccion = $idse 
+        where  idseccion = $idsec 
         and '$anio/$mes/01' BETWEEN vig_inicio and vig_fin";
 		$this->Execute($query);
             if($this->Recordcount()==0){

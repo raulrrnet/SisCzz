@@ -95,7 +95,7 @@ document.form1.submit();
   while (!$otermi->EOF) { 
 $ordent = $otermi->Fields('idorden');
 
-$query_datorden ="SELECT sum(cantidad)*1000 as cant FROM factura f,detallefact df WHERE f.idfact=df.idfact and estado<>'anulada' and idorden=$ordent";
+$query_datorden ="SELECT sum(cantidad)*1000 as cant FROM factura f,detallefact df WHERE f.idfact=df.idfactura and estado<>'anulada' and idorden=$ordent";
 $datorden = $cnx_cuzzicia->SelectLimit($query_datorden) or die($cnx_cuzzicia->ErrorMsg());
 ?>
   <tr>

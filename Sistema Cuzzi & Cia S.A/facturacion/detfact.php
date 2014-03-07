@@ -49,7 +49,7 @@ if($mone=='dolar'){
 	$monto = $monto*$tc;}
 else{$dolar = $monto/$tc;}
 if($cant==''){$cant=1;}
-  $insertSQL = "INSERT INTO detallefact (idfact, idorden, cantidad, descripcion, monto, mdolar, und) VALUES ('$idfact', $idord, $cant, '$desc', $monto, $dolar, '$und')";
+  $insertSQL = "INSERT INTO detallefact (idfactura, idorden, cantidad, descripcion, monto, mdolar, und) VALUES ('$idfact', $idord, $cant, '$desc', $monto, $dolar, '$und')";
   $Result1 = $cnx_cuzzicia->Execute($insertSQL) or die($cnx_cuzzicia->ErrorMsg());
 
   $insertGoTo = "detfact.php";

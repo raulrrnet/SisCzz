@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_gclientes" value="name:idsalida;datatype:int4,name:nroguia;datatype:int4,name:idcliente;datatype:int4,name:fecha;datatype:date,name:idlocal;datatype:int4,name:idmotivo;datatype:int4,name:serie;datatype:int4,name:estado;datatype:text,name:iddetsali;datatype:int4,name:idsalidaal;datatype:int4,name:idorden;datatype:int4,name:idproducto;datatype:int4,name:descripcion;datatype:text,name:cantidad;datatype:numeric,name:pedido;datatype:text,name:und;datatype:varchar,name:idversion;datatype:int4" />
+	<infoitem key="UD_clientes" value="name:idcliente;datatype:int4,name:cliente;datatype:text,name:direccion;datatype:text,name:ruc;datatype:int8,name:idgcliente;datatype:int4,name:idgclien;datatype:int4,name:nombre;datatype:text,name:orden;datatype:numeric" />
+</info>

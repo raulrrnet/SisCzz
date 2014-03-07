@@ -15,7 +15,7 @@ if (isset($_GET['idfac'])) {
   $idfact = $_GET['idfac'];
 }  
 // begin Recordset
-$query_factura = "SELECT * FROM factura f,detallefact df,clientes c  WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and f.idfact='$idfact' ORDER BY iddetfact";
+$query_factura = "SELECT * FROM factura f,detallefact df,clientes c  WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and f.idfact='$idfact' ORDER BY iddetfact";
 $factura = $cnx_cuzzicia->SelectLimit($query_factura) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_factura = $factura->RecordCount();
 // end Recordset
@@ -95,10 +95,10 @@ $totalRows_factura = $factura->RecordCount();
 	if($igv == 0){
 	$pdf->SetY(110);
 	$pdf->Cell(30);
-	$pdf->Cell(82,4,"Exonerado del IGV según Ley N° 28086, Art. 19 Ley",0,0,'L',0);
+	$pdf->Cell(82,4,"Exonerado del IGV segï¿½n Ley Nï¿½ 28086, Art. 19 Ley",0,0,'L',0);
 	$pdf->Ln(5);
 	$pdf->Cell(30);
-	$pdf->Cell(82,4,"Democratización del Libro y de Fomento a la Lectura.",0,0,'L',0);
+	$pdf->Cell(82,4,"Democratizaciï¿½n del Libro y de Fomento a la Lectura.",0,0,'L',0);
 	}
 	//Calculamos de numero a palabras
 	$nw = new Numbers_Words();
@@ -110,7 +110,7 @@ $totalRows_factura = $factura->RecordCount();
 	$pdf->Cell(5,4,"US$",0,0,'R',0);
     $pdf->Cell(20,4,$importe4,0,0,'R',0);
 	$pdf->Ln(4.5);
-	//Modificamos esta parte para que también muestra la parte fraccionaria y M.N.
+	//Modificamos esta parte para que tambiï¿½n muestra la parte fraccionaria y M.N.
 	$decimales = explode(".",$total);
 	$pdf->SetFont('Arial','',9);
 	$pdf->Cell(147,4,strtoupper($nw->toWords($decimales[0], "es") ." con ".$decimales[1]."/100 Dolares Americanos"),0,0,'L',0);
@@ -129,7 +129,7 @@ $totalRows_factura = $factura->RecordCount();
 	$pdf->Cell(5,4,"S/.",0,0,'R',0);
     $pdf->Cell(20,4,$importe4,0,0,'R',0);
 	$pdf->Ln(4.5);
-	//Modificamos esta parte para que también muestra la parte fraccionaria y M.N.
+	//Modificamos esta parte para que tambiï¿½n muestra la parte fraccionaria y M.N.
 	$decimales = explode(".",$total);
 	$pdf->SetFont('Arial','',9);
 	$pdf->Cell(147,4,strtoupper($nw->toWords($decimales[0], "es") ." con ".$decimales[1]."/100 Nuevos Soles"),0,0,'L',0);

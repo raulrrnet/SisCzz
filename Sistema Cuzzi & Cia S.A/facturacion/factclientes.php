@@ -15,7 +15,7 @@ if (isset($_POST['fecfin'])) {
   $fecfin = $_POST['fecfin'];
 }
 // begin Recordset
-$query_Recordset1 = "SELECT f.idfact,fecha,cliente,moneda,sum(monto*cantidad)as soles,sum(mdolar*cantidad)as dolar FROM factura f, detallefact df, clientes c WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and fecha BETWEEN '$fecini' and '$fecfin' and estado<>'anulada' GROUP BY f.idfact,fecha,cliente,moneda ORDER BY fecha";
+$query_Recordset1 = "SELECT f.idfact,fecha,cliente,moneda,sum(monto*cantidad)as soles,sum(mdolar*cantidad)as dolar FROM factura f, detallefact df, clientes c WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and fecha BETWEEN '$fecini' and '$fecfin' and estado<>'anulada' GROUP BY f.idfact,fecha,cliente,moneda ORDER BY fecha";
 $Recordset1 = $cnx_cuzzicia->SelectLimit($query_Recordset1) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_Recordset1 = $Recordset1->RecordCount();
 // end Recordset

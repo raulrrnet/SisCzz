@@ -24,7 +24,7 @@ $query_datorden = "SELECT * FROM orden o,clientes c WHERE idorden=$ordenc and o.
 $datorden = $cnx_cuzzicia->SelectLimit($query_datorden) or die($cnx_cuzzicia->ErrorMsg());}
 // end Recordset
 // begin Recordset
-$query_centre = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as cant FROM factura f,detallefact df WHERE f.idfact=df.idfact and estado<>'anulada' and idorden=$ordenc";
+$query_centre = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as cant FROM factura f,detallefact df WHERE f.idfact=df.idfactura and estado<>'anulada' and idorden=$ordenc";
 $centre = $cnx_cuzzicia->SelectLimit($query_centre) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_centre = $centre->RecordCount();
 // end Recordset

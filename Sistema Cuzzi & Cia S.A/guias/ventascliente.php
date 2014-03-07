@@ -14,7 +14,7 @@ if (isset($_POST['cliente'])) {
 }
 $fec = date("Y/m/d");
 // begin Recordset
-$query_cnkardex = "SELECT date_part('year', fecha) as año,idorden,min(descripcion), sum(case when(date_part('month', fecha)=1) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as enero, sum(case when(date_part('month', fecha)=2) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as febrero, sum(case when(date_part('month', fecha)=3) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as marzo, sum(case when(date_part('month', fecha)=4) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as abril, sum(case when(date_part('month', fecha)=5) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as mayo, sum(case when(date_part('month', fecha)=6) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as junio, sum(case when(date_part('month', fecha)=7) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as julio, sum(case when(date_part('month', fecha)=8) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as agosto, sum(case when(date_part('month', fecha)=9) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as setiembre, sum(case when(date_part('month', fecha)=10) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as octubre, sum(case when(date_part('month', fecha)=11) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as noviembre, sum(case when(date_part('month', fecha)=12) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as diciembre, sum(case when und='Mill' then cantidad*1000 else cantidad end) as th FROM factura f,detallefact df WHERE f.idfact=df.idfact and $idcli and fecha <= '$fec' and estado<>'anulada' and idorden in (select idorden from detsalidaal group by idorden) GROUP BY idorden,date_part('year', fecha) ORDER BY idorden,date_part('year', fecha)";
+$query_cnkardex = "SELECT date_part('year', fecha) as año,idorden,min(descripcion), sum(case when(date_part('month', fecha)=1) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as enero, sum(case when(date_part('month', fecha)=2) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as febrero, sum(case when(date_part('month', fecha)=3) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as marzo, sum(case when(date_part('month', fecha)=4) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as abril, sum(case when(date_part('month', fecha)=5) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as mayo, sum(case when(date_part('month', fecha)=6) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as junio, sum(case when(date_part('month', fecha)=7) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as julio, sum(case when(date_part('month', fecha)=8) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as agosto, sum(case when(date_part('month', fecha)=9) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as setiembre, sum(case when(date_part('month', fecha)=10) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as octubre, sum(case when(date_part('month', fecha)=11) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as noviembre, sum(case when(date_part('month', fecha)=12) then(case when und='Mill' then cantidad*1000 else cantidad end) end) as diciembre, sum(case when und='Mill' then cantidad*1000 else cantidad end) as th FROM factura f,detallefact df WHERE f.idfact=df.idfactura and $idcli and fecha <= '$fec' and estado<>'anulada' and idorden in (select idorden from detsalidaal group by idorden) GROUP BY idorden,date_part('year', fecha) ORDER BY idorden,date_part('year', fecha)";
 $cnkardex = $cnx_cuzzicia->SelectLimit($query_cnkardex) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_cnkardex = $cnkardex->RecordCount();
 // end Recordset
@@ -36,7 +36,7 @@ $lastTFM_nest = "";
 <html lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Documento sin t&iacute;tulo</title>
+<title>Ventas Cliente</title>
 <script type="text/javascript" src="../includes/common/js/sigslot_core.js"></script>
 <script src="../includes/common/js/base.js" type="text/javascript"></script>
 <script src="../includes/common/js/utility.js" type="text/javascript"></script>
@@ -55,6 +55,16 @@ document.form1.action= "ventascliente.php"
 document.form1.submit();
 }
 </script>
+<style type="text/css">
+<!--
+.cdiv {
+	height: auto;
+	width: 300px;
+	overflow:no;
+	white-space:normal
+}
+-->
+</style>
 </head>
 <body>
 <table cellpadding="2" cellspacing="0" class="KT_tngtable">
@@ -111,7 +121,7 @@ document.form1.submit();
     <tr>
       <td><?php echo $cnkardex->Fields('año');?></td>
       <td><?php echo $cnkardex->Fields('idorden');?></td>
-      <td><?php echo $cnkardex->Fields('min');?></td>
+      <td><div class="cdiv"><?php echo $cnkardex->Fields('min');?></div></td>
       <td align="right"><?php echo number_format($cnkardex->Fields('enero'),2);?></td>
       <td align="right"><?php echo number_format($cnkardex->Fields('febrero'),2);?></td>
       <td align="right"><?php echo number_format($cnkardex->Fields('marzo'),2);?></td>

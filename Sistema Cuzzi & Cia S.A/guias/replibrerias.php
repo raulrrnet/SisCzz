@@ -36,10 +36,10 @@ $totalRows_Recordset1 = $Recordset1->RecordCount();
 $idcli = $Recordset1->Fields('idcliente');
 $idord = $Recordset1->Fields('idorden');
 if($idcli == 114){
-$query_datorden = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as scant FROM factura f, detallefact d WHERE f.idfact=d.idfact and f.idcliente not in (SELECT idcliente FROM salidaal WHERE idcliente<>114 GROUP BY idcliente) and d.idorden=$idord and estado<>'anulada'";
+$query_datorden = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as scant FROM factura f, detallefact d WHERE f.idfact=d.idfactura and f.idcliente not in (SELECT idcliente FROM salidaal WHERE idcliente<>114 GROUP BY idcliente) and d.idorden=$idord and estado<>'anulada'";
 $datorden = $cnx_cuzzicia->SelectLimit($query_datorden) or die($cnx_cuzzicia->ErrorMsg());  
 }else{
-$query_datorden = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as scant FROM factura f, detallefact d WHERE f.idfact=d.idfact and f.idcliente=$idcli and d.idorden=$idord and estado<>'anulada'";
+$query_datorden = "SELECT round(sum(case when und='Mill' then (cantidad * 1000) else cantidad end)) as scant FROM factura f, detallefact d WHERE f.idfact=d.idfactura and f.idcliente=$idcli and d.idorden=$idord and estado<>'anulada'";
 $datorden = $cnx_cuzzicia->SelectLimit($query_datorden) or die($cnx_cuzzicia->ErrorMsg());  
 }
 ?>

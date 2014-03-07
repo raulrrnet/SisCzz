@@ -14,7 +14,7 @@ if (isset($_GET['idfac'])) {
   $idfact = $_GET['idfac'];
 }
 // begin Recordset
-$query_factura = "SELECT * FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and df.iddetfact=$iddet";
+$query_factura = "SELECT * FROM factura f,detallefact df,clientes c WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and df.iddetfact=$iddet";
 $factura = $cnx_cuzzicia->SelectLimit($query_factura) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_factura = $factura->RecordCount();
 // end Recordset
@@ -35,7 +35,7 @@ $cant = $_POST['cantidad'];
 $descrip = $_POST['descrip'];
 $montou = $_POST['montou'];
 
-  $insertSQL = sprintf("UPDATE detallefact SET idfact='$idfact',idorden=$idorden,cantidad=$cant,descripcion='$descrip',monto=$montou WHERE iddetfact=$iddet");
+  $insertSQL = sprintf("UPDATE detallefact SET idfactura='$idfact',idorden=$idorden,cantidad=$cant,descripcion='$descrip',monto=$montou WHERE iddetfact=$iddet");
 
   $Result1 = $cnx_cuzzicia->Execute($insertSQL) or die($cnx_cuzzicia->ErrorMsg());
 

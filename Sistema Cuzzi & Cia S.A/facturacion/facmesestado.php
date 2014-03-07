@@ -19,7 +19,7 @@ $fecfin = $anio."/".$mes."/".$ud;
 // begin Recordset ordenes en proceso
 $query_p="SELECT idorden,max(cliente)as cliente,max(descripcion)as descripcion,sum(cantidad) as cant, max(monto) as pu, sum(cantidad*monto) as tot
 FROM factura f,detallefact df, clientes c
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
 and idorden in (select idorden from orden where fechatermi is null and (fecha<='2013/02/28' or fecha is null) and (fechaliqui is null or fechaliqui > '2013/02/28'))
 GROUP BY idorden ORDER BY idorden";
 $oproceso = $cnx_cuzzicia->SelectLimit($query_p) or die($cnx_cuzzicia->ErrorMsg());
@@ -28,7 +28,7 @@ $toproceso = $oproceso->RecordCount();
 // begin Recordset ordenes terminadas
 $query_t = "SELECT idorden,max(cliente)as cliente,max(descripcion)as descripcion,sum(cantidad) as cant, max(monto) as pu, sum(cantidad*monto) as tot
 FROM factura f,detallefact df, clientes c
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
 and idorden in (select idorden from orden where fechaliqui BETWEEN '2013/02/01' and '2013/02/28')
 GROUP BY idorden ORDER BY idorden";
 $otermi = $cnx_cuzzicia->SelectLimit($query_t) or die($cnx_cuzzicia->ErrorMsg());
@@ -37,13 +37,16 @@ $totermi = $otermi->RecordCount();
 // begin Recordset ordenes terminadas meses ant.
 $query_ma = "SELECT idorden,max(cliente)as cliente,max(descripcion)as descripcion,sum(cantidad) as cant, max(monto) as pu, sum(cantidad*monto) as tot
 FROM factura f,detallefact df, clientes c
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and f.fecha BETWEEN '2013/02/01' and '2013/02/28' and estado<>'anulada' and idorden<>0
 and idorden in (select idorden from orden where fechaliqui < '2013/02/01' or fechatermi < '2013/02/01')
 GROUP BY idorden ORDER BY idorden";
 $otermima = $cnx_cuzzicia->SelectLimit($query_ma) or die($cnx_cuzzicia->ErrorMsg());
 $tootermima = $otermima->RecordCount();
 //PHP ADODB document - made with PHAkt 3.6.0
 $msolesi=0;$msolesm=0;$msolest=0;$msolesit=0;$msolesmt=0;$msolestt=0;$tsolesi=0;$tsolesm=0;$tsolest=0;$tsolesit=0;$tsolesmt=0;$tsolestt=0;$ttsolest=0;$ttsolestt=0;$msolesita=0;$tsolesita=0;$msolesmta=0;$tsolesmta=0;$msolestta=0;$tsolestta=0;$ttsolestta=0;
+$factp=0;
+$factt=0;
+$factta=0;
 ?>
 <html xmlns:wdg="http://www.interaktonline.com/MXWidgets">
 <head>
@@ -199,7 +202,7 @@ $cndetinfo = $cnx_cuzzicia->SelectLimit($query_detinfo) or die($cnx_cuzzicia->Er
 $query_terce = "SELECT sum(case when(fecha BETWEEN '$fecini' and '$fecfin') then(valorus*cantidad) end) as mes,sum(valorus*cantidad) as soles FROM v_terceros WHERE idorden=$ordent";
 $cnterce = $cnx_cuzzicia->SelectLimit($query_terce) or die($cnx_cuzzicia->ErrorMsg());
 
-$qf = "SELECT sum(cantidad) as cant FROM  factura f,detallefact df WHERE f.idfact=df.idfact and idorden=$ordent and f.fecha <= '$fecfin' and estado<>'anulada' and idorden<>0";
+$qf = "SELECT sum(cantidad) as cant FROM  factura f,detallefact df WHERE f.idfact=df.idfactura and idorden=$ordent and f.fecha <= '$fecfin' and estado<>'anulada' and idorden<>0";
 $exqf = $cnx_cuzzicia->SelectLimit($qf) or die($cnx_cuzzicia->ErrorMsg());
 if($datorden->Fields('cantprod')==0 || $datorden->Fields('cantprod')==1){
 $cantfact = $exqf->Fields('cant');}else{$cantfact = $exqf->Fields('cant')*1000;}

@@ -20,7 +20,7 @@ $fecini = $anio."/".$mes."/01";
 $fecfin = $anio."/".$mes."/".$ud;
 // begin Recordset ordenes terminadas
 $query_t = "SELECT idorden, sum(cantidad*monto) as tfact FROM factura f, detallefact df, clientes c
-WHERE f.idfact=df.idfact and f.idcliente=c.idcliente and fecha BETWEEN '2012/01/01' and '2012/12/31'
+WHERE f.idfact=df.idfactura and f.idcliente=c.idcliente and fecha BETWEEN '2012/01/01' and '2012/12/31'
 and estado<>'anulada' and idorden<>0
 GROUP BY idorden ORDER BY idorden";
 $otermi = $cnx_cuzzicia->SelectLimit($query_t) or die($cnx_cuzzicia->ErrorMsg());
@@ -108,7 +108,7 @@ $cndetinfo = $cnx_cuzzicia->SelectLimit($query_detinfo) or die($cnx_cuzzicia->Er
 $query_terce = "SELECT sum(valorus*cantidad) as soles FROM v_terceros WHERE idorden=$ordent";
 $cnterce = $cnx_cuzzicia->SelectLimit($query_terce) or die($cnx_cuzzicia->ErrorMsg());
 
-$qf = "SELECT sum(cantidad) as cant FROM  factura f,detallefact df WHERE f.idfact=df.idfact and idorden=$ordent and f.fecha BETWEEN '2012/01/01' and '2012/12/31' and estado<>'anulada' and idorden<>0";
+$qf = "SELECT sum(cantidad) as cant FROM  factura f,detallefact df WHERE f.idfact=df.idfactura and idorden=$ordent and f.fecha BETWEEN '2012/01/01' and '2012/12/31' and estado<>'anulada' and idorden<>0";
 $exqf = $cnx_cuzzicia->SelectLimit($qf) or die($cnx_cuzzicia->ErrorMsg());
 if($datorden->Fields('cantprod')==0 || $datorden->Fields('cantprod')==1){
 $cantfact = $exqf->Fields('cant');}else{$cantfact = $exqf->Fields('cant')*1000;}
