@@ -41,7 +41,7 @@ function Trigger_LinkTransactions(&$tNG) {
 //end Trigger_LinkTransactions trigger
 
 // begin Recordset
-$query_seccion = "SELECT * FROM seccion ORDER BY seccion ASC";
+$query_seccion = "SELECT * FROM seccion WHERE status<>'x' ORDER BY seccion ASC";
 $seccion = $cnx_cuzzicia->SelectLimit($query_seccion) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_seccion = $seccion->RecordCount();
 // end Recordset

@@ -6,7 +6,7 @@ require_once('../includes/wdg/WDG.php');
 //Aditional Functions
 require_once('../includes/functions.inc.php');
 // begin Recordset
-$query_seccion = "SELECT * FROM seccion ORDER BY seccion ASC";
+$query_seccion = "SELECT * FROM seccion WHERE status<>'x' ORDER BY seccion ASC";
 $seccion = $cnx_cuzzicia->SelectLimit($query_seccion) or die($cnx_cuzzicia->ErrorMsg());
 $totalRows_seccion = $seccion->RecordCount();
 // end Recordset
