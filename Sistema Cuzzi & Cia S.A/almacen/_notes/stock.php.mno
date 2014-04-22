@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_almacen" value="name:idorden;datatype:int4,name:sum;datatype:numeric,name:undpack;datatype:numeric" />
+</info>

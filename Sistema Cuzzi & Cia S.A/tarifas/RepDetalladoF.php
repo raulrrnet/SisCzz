@@ -5,7 +5,7 @@ require_once('clsconexion.php');
 include('adodb/adodb.inc.php');
 	$db = ADONewConnection('postgres8'); # eg 'mysql' o 'postgres'
 	$db->Connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-	$rsSeccion = $db->Execute("SELECT * FROM seccion where idseccion<>0 ORDER BY seccion");
+	$rsSeccion = $db->Execute("SELECT * FROM seccion where status<>'x' and idseccion<>0 ORDER BY seccion");
 	$rsSeccion->MoveFirst();
 	$rsReporte = $db->Execute("select * from reportefinal ORDER BY idreporte");
 	$rsReporte->MoveFirst();

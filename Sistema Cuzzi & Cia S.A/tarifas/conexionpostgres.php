@@ -283,7 +283,7 @@ class seccion extends conexion{
 		return $this->fields('potencia');	
 	}
 	public function conectar(){
-		$this->sql="SELECT idseccion,seccion,unidad,status,potencia FROM seccion where idseccion<>0 ORDER BY seccion";
+		$this->sql="SELECT idseccion,seccion,unidad,status,potencia FROM seccion where status<>'x' and idseccion<>0 ORDER BY seccion";
 		$this->Execute($this->sql);
 	}
 }
@@ -440,7 +440,7 @@ private $tps;
         ahora es una clase	
     }*/
     function diferenciafechas($fecha1,$fecha2){
-    	$query="select (DATE '$fecha1'-'$fecha2')/30 as diff";
+    	$query="select extract(year from age('$fecha1' ,'$fecha2'))*12+extract(month from age('$fecha1' ,'$fecha2')) as diff;";
        	$rs=pg_query($query) or die("error en la consulta:".$query);
 		$val= pg_fetch_array($rs);
 		pg_free_result($rs);

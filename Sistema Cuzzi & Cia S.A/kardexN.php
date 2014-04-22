@@ -3,7 +3,7 @@
 require_once('Connections/cnx_cuzzicia.php');
 
 // begin Recordset
-$fec__cningresos = '2012/12/31';
+$fec__cningresos = '2013/12/31';
 if (isset($_POST['fecha'])) {
   $fec__cningresos = $_POST['fecha'];
 }

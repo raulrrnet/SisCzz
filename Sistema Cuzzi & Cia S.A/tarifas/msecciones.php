@@ -14,7 +14,7 @@ $fecfecha = strtotime($fec);
 $anio = date("Y",$fecfecha);
 $mes = date("m",$fecfecha);
 // begin Recordset
-$sql = sprintf("SELECT * From seccion where status='Vigente' ORDER BY seccion");
+$sql = sprintf("SELECT * From seccion ORDER BY status,seccion");
 $exsql = $cnx_cuzzicia->SelectLimit($sql) or die($cnx_cuzzicia->ErrorMsg());
 $totalRowsSql = $exsql->RecordCount();
 // end Recordset

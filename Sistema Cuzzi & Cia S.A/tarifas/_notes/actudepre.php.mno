@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_seccion" value="name:idseccion;datatype:int4,name:seccion;datatype:text,name:unidad;datatype:text,name:status;datatype:text,name:potencia;datatype:numeric" />
+	<infoitem key="UD_actumante" value="name:iddeprecia;datatype:int4,name:descripcion;datatype:text,name:fecingreso;datatype:date,name:importe;datatype:float8,name:tasa;datatype:numeric,name:depreciado;datatype:float8" />
+</info>

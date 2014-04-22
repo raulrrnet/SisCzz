@@ -8,8 +8,8 @@ require_once('../Connections/cnx_cuzzicia.php');
 require_once('../includes/functions.inc.php');
 
 $fec = date('Y/m/d');
-if (isset($_POST['fecha'])) {
-  $fec = $_POST['fecha'];
+if (isset($_GET['fecha'])) {
+  $fec = $_GET['fecha'];
 }
 $fecfecha = strtotime($fec); 
 $anio = date("Y",$fecfecha);
@@ -49,7 +49,7 @@ $totalRows_seccion = $seccion->RecordCount();
 <body>
 <table border="0" align="center" cellpadding="0" cellspacing="0" class="KT_tngtable">
   <tr>
-    <td align="center"><form name="form1" method="post" action="mantedepre.php">
+    <td align="center"><form name="form1" method="get" action="mantedepre.php">
       <input name="fecha" id="fecha" wdg:mondayfirst="false" wdg:subtype="Calendar" wdg:mask="<?php echo $KT_screen_date_format; ?>" wdg:type="widget" wdg:singleclick="true" wdg:restricttomask="no">
       <input type="submit" name="Submit" value="Mostrar">
     </form></td>
@@ -57,7 +57,7 @@ $totalRows_seccion = $seccion->RecordCount();
   <tr>
     <td><table cellpadding="2" cellspacing="0" class="KT_tngtable">
       <tr>
-        <td colspan="7" class="KT_th"><span class="Estilo2"><strong>COSTOS DEPRECIACION</strong></span></td>
+        <td colspan="8" class="KT_th"><span class="Estilo2"><strong>COSTOS DEPRECIACION AL <?php echo $fec; ?></strong></span></td>
         </tr>
       <tr>
         <td width="500" class="KT_th">Descripci&oacute;n</td>
@@ -66,6 +66,7 @@ $totalRows_seccion = $seccion->RecordCount();
         <td class="KT_th">Tasa</td>
         <td class="KT_th">Dep.</td>
         <td class="KT_th">%</td>
+        <td class="KT_th">&nbsp;</td>
         <td class="KT_th">&nbsp;</td>
       </tr>
 <?php
@@ -82,7 +83,11 @@ $depresec12 = $cnx_cuzzicia->SelectLimit($q_depsec12) or die($cnx_cuzzicia->Erro
 		$totdep12t[] = 0;
 		while (!$depresec12->EOF) {
 		$fecingre12 = $depresec12->Fields('fecingreso');
-		$q_meses12 = sprintf("select (DATE '$fec'-'$fecingre12')/30 as diff;");
+		$fecin = strtotime($fecingre12);
+		$anfi = date("Y",$fecin);
+		$mesfi = date("m",$fecin);
+		$fecing = $anfi."/".$mesfi."/01";
+		$q_meses12 = sprintf("select extract(year from age('$fec' ,'$fecing'))*12+extract(month from age('$fec' ,'$fecing'))+1 as diff;");
 		$excmeses12 = $cnx_cuzzicia->SelectLimit($q_meses12) or die($cnx_cuzzicia->ErrorMsg());
 		$diff12 = $excmeses12->Fields('diff');
 		if($fecingre12<=$fec and $diff12<=$depresec12->Fields('nrocuotas')){
@@ -96,11 +101,12 @@ if($newnom=$oldname){}else{
 <?php }?>
 <tr>
        <td width="500"><?php echo $depresec12->Fields('descripcion'); ?></td>
-        <td><?php echo $depresec12 ->Fields('fecingreso'); ?></td>
-        <td><?php echo $depresec12 ->Fields('importe'); ?></td>
-        <td><?php echo number_format($depresec12->Fields('tasa'),2); ?></td>
+        <td align="right"><?php echo $depresec12 ->Fields('fecingreso'); ?></td>
+        <td align="right"><?php echo number_format($depresec12 ->Fields('importe'),2); ?></td>
+        <td align="right"><?php echo number_format($depresec12->Fields('tasa'),2); ?></td>
         <td align="right"><?php echo number_format($depresec12->Fields('dep'),2); ?></td>
         <td align="right"><?php echo $depresec12->Fields('porcentaje')*100; ?>%</td>
+        <td align="right"><a href="actudepre.php?iddep=<?php echo $depresec12->Fields('iddeprecia');?>&fec=<?php echo $fec;?>">MODIFICAR</a></td>
         <td align="right"><a href="elimina.php?tabla=depreciacion&idtabla=iddeprecia&goto=mantedepre.php&id=<?php echo $depresec12->Fields('iddeprecia');?>">ELIMINAR</a></td>
       </tr>
       <?php

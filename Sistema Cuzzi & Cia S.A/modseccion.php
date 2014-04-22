@@ -50,7 +50,7 @@ $totalRows_seccion = $seccion->RecordCount();
       <td colspan="2" class="KT_th">Modificar Secci&oacute;n </td>
     </tr>
     <tr>
-      <td class="KT_th"><input name="id" type="hidden" id="id"></td>
+      <td class="KT_th"><input name="id" type="hidden" id="id" value="<?php echo $seccion->Fields('idseccion'); ?>"></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -66,7 +66,7 @@ $totalRows_seccion = $seccion->RecordCount();
     <tr>
       <td class="KT_th">Status:</td>
       <td><select name="status" size="2" id="status">
-        <option selected="selected" value="" <?php if (!(strcmp("", $seccion->Fields('status')))) {echo "SELECTED";} ?>>Vigente</option>
+        <option value="Vigente" selected>Vigente</option>
         <option value="x" <?php if (!(strcmp("x", $seccion->Fields('status')))) {echo "SELECTED";} ?>>No Vigente</option>
       </select></td>
     </tr>
@@ -77,7 +77,7 @@ $totalRows_seccion = $seccion->RecordCount();
       </label></td>
     </tr>
     <tr class="KT_buttons">
-      <td colspan="2"><input type="submit" name="KT_Insert1" id="KT_Insert1" value="Ingresar" />      </td>
+      <td colspan="2"><input type="submit" name="KT_Insert1" id="KT_Insert1" value="Actualizar" />      </td>
     </tr>
   </table>
   

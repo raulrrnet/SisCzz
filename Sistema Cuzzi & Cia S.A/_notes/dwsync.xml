@@ -113,11 +113,11 @@
 <file name="asinaoper.php" local="129107565167343750" remote="129107565160000000" testing="0" />
 <file name="modasig.php" local="129107664379687500" remote="129107664370000000" testing="0" />
 <file name="loginl.php" local="130077568225237686" remote="130077568220000000" testing="130077568220000000" />
-<file name="modseccion.php" local="129107548818906250" remote="129107548810000000" testing="0" />
+<file name="modseccion.php" local="130405031250091209" remote="130405031250000000" testing="130405031250000000" />
 <file name="asigna.php" local="129107721246718750" remote="129107721240000000" testing="0" />
 <file name="compcant-pCOPIA.php" local="128916674440156250" remote="128916674440000000" testing="0" />
 <file name="pruebacosto.php" local="128649836960000000" remote="128649836960000000" testing="0" />
-<file name="kardexN.php" local="130084421140159134" remote="130084421140000000" testing="130084421140000000" />
+<file name="kardexN.php" local="130401720177012302" remote="130401720170000000" testing="130401720170000000" />
 <file name="detorden.php" local="129459739932097838" remote="129459739930000000" testing="0" />
 <file name="ordenimp.php" local="129975627493793773" remote="129975627490000000" testing="129942729280000000" />
 <file name="mdorden.php" local="129942727844052102" remote="129942727840000000" testing="129942727840000000" />
@@ -147,4 +147,5 @@
 <file name="loginf.php" local="130077540726536746" remote="130077540720000000" testing="130077540720000000" />
 <file name="saldosmp.php" local="130105162027189678" remote="130105162020000000" testing="130105162020000000" />
 <file name="tceditar.php" local="130347327625543944" remote="130347327620000000" testing="130347327620000000" />
+<file name="mpsunat.php" local="130403504098211171" remote="130403504090000000" testing="130403504090000000" />
 </dwsync>
